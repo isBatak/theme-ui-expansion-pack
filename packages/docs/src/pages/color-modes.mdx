@@ -1,0 +1,150 @@
+---
+title: Color Modes
+---
+
+
+# Color Modes
+
+Color modes can be used to create a user-configurable _dark mode_ or any number of other color modes.
+
+## Defining colors
+
+In the `theme.colors` object, add a nested `modes` object that will contain keys for optional color modes.
+
+```js
+// example theme colors
+{
+  colors: {
+    text: '#000',
+    background: '#fff',
+    primary: '#07c',
+    modes: {
+      dark: {
+        text: '#fff',
+        background: '#000',
+        primary: '#0cf',
+      }
+    }
+  }
+}
+```
+
+The colors defined at the root of the `colors` object will be accessible as `default`. All colors
+found in `colors.modes` will be referenced by their key. The above example will have two modes: `default` and `dark`.
+
+## Setting the color mode
+
+Use the `useColorMode` hook in your application to change the color mode.
+This value will be stored in `localStorage` and used whenever the page is loaded.
+
+```jsx
+import React from 'react'
+import { useColorMode } from 'theme-ui'
+
+export default props => {
+  const [colorMode, setColorMode] = useColorMode()
+  return (
+    <header>
+      <button
+        onClick={e => {
+          setColorMode(colorMode === 'default' ? 'dark' : 'default')
+        }}>
+        Toggle {colorMode === 'default' ? 'Dark' : 'Light'}
+      </button>
+    </header>
+  )
+}
+```
+
+## Applying colors
+
+The ThemeProvider component will automatically apply color mode styles to the `<body>` element.
+
+```jsx
+import React from 'react'
+import { ThemeProvider } from 'theme-ui'
+import theme from './theme'
+
+export default props => (
+  <ThemeProvider theme={theme}>
+    {props.children}
+  </ThemeProvider>
+)
+```
+
+To disable this behavior, add the `useBodyStyles: false` flag to your theme.
+
+## Gatsby plugin
+
+For use in a Gatsby site, install and use `gatsby-plugin-theme-ui` to add the ThemeProvider to the root of your application.
+The plugin will also help prevent the flash of colors that can happen during page load when a user has a non-default color mode set.
+
+```sh
+npm i gatsby-plugin-theme-ui
+```
+
+This plugin will look for a `src/gatsby-plugin-theme-ui/index.js` file to import and pass to the ThemeProvider.
+
+```js
+// gatsby-config.js
+module.exports = {
+  plugins: ['gatsby-plugin-theme-ui'],
+}
+```
+
+See the [Gatsby plugin docs](/packages/gatsby-plugin) for more info.
+
+## Advanced
+
+Theme UI includes a few advanced usage options for color modes.
+
+### Turn off custom properties
+
+Theme UI uses
+[CSS custom properties](https://caniuse.com/#feat=css-variables)
+under the hood to help prevent the flash of color on load.
+If you're targeting browsers that don't support custom properties you can turn off this setting.
+This will cause the colors to flash on initial page load.
+
+```js
+// example theme colors
+{
+  useCustomProperties: false,
+  colors: {
+    text: '#000',
+    background: '#fff',
+    primary: '#07c',
+    modes: {
+      dark: {
+        text: '#fff',
+        background: '#000',
+        primary: '#0cf',
+      }
+    }
+  }
+}
+```
+
+### Initialize mode with `prefers-color-scheme` media query
+
+To initialize a color mode based on the `prefers-color-scheme` media query, add the `useColorSchemeMediaQuery` flag to your theme.
+This will set the initial color mode to `dark` when `@media (prefers-color-scheme: dark)` matches,
+or `light` when `@media (prefers-color-scheme: light)` matches.
+If you do not have a color mode named `dark` or `light`, this will have no effect.
+
+```js
+{
+  useColorSchemeMediaQuery: true,
+  colors: {
+    text: '#000',
+    background: '#fff',
+    modes: {
+      dark: {
+        text: '#fff',
+        background: '#000',
+      }
+    }
+  }
+}
+```
+

@@ -1,0 +1,277 @@
+---
+title: Theming
+---
+
+# Theming
+
+Theming with Theme UI is based on a [Theme Specification][] including a `theme.styles` object for styling MDX elements and other components.
+By adhering to a standard Theme Specification, Theme UI is designed to be interoperable with as many other libraries as possible.
+
+[theme specification]: /theme-spec
+
+## Colors
+
+Add a `theme.colors` object to provide colors for a theme.
+In order to ensure color palettes are as interoperable as possible, the following color keys should be used for defining a base set of colors:
+
+| Key          | Description                                     |
+| ------------ | ----------------------------------------------- |
+| `text`       | body color                                      |
+| `background` | body background color                           |
+| `primary`    | primary button and link color                   |
+| `secondary`  | secondary color - can be used for hover states  |
+| `accent`     | a contrast color for emphasizing UI             |
+| `highlight`     | a background color for highlighting text
+| `muted`      | a gray or subdued color for decorative purposes |
+
+Beyond these base colors, any additional values can be added to a theme to augment the base color palette.
+
+### Color Modes
+
+Multiple color modes, i.e. _dark mode_, can be handled with a nested `modes` object that matches the shape of the default colors.
+
+```js
+// example colors with dark mode
+colors: {
+  text: '#000',
+  background: '#fff',
+  primary: '#07c',
+  modes: {
+    dark: {
+      text: '#fff',
+      background: '#000',
+      primary: '#0cf',
+    }
+  }
+}
+```
+
+Learn more in the [color mode docs](/color-modes).
+
+## Typography
+
+Core typographic values can be stored in the following theme keys:
+
+- `fonts` (font families)
+- `fontSizes`
+- `fontWeights`
+- `lineHeights`
+- `letterSpacings`
+
+```js
+// example theme object
+{
+  colors,
+  fonts: {
+    body: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
+    heading: 'Georgia, serif',
+    monospace: 'Menlo, monospace',
+  },
+  fontSizes: [
+    12, 14, 16, 20, 24, 32, 48, 64
+  ],
+  fontWeights: {
+    body: 400,
+    heading: 700,
+    bold: 700,
+  },
+  lineHeights: {
+    body: 1.5,
+    heading: 1.125,
+  },
+  letterSpacings: {
+    body: 'normal',
+    caps: '0.2em',
+  },
+}
+```
+
+## Styles
+
+Styles for elements rendered in MDX can be added to the `theme.styles` object.
+This is the primary API for applying typographic styles in markdown content.
+Styles within this object have access to other values in the theme object, such as colors, fonts, and space.
+
+```js
+// example theme styles
+{
+  colors: {
+    text: '#000',
+    background: '#fff',
+    primary: '#07c',
+  },
+  fonts: {
+    body: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
+    heading: 'Georgia, serif',
+  },
+  fontWeights: {
+    body: 400,
+    heading: 700,
+  },
+  styles: {
+    h1: {
+      fontSize: 32,
+      fontFamily: 'heading',
+      fontWeight: 'heading',
+      color: 'primary',
+      mt: 4,
+      mb: 2,
+    },
+  }
+}
+```
+
+## Body Styles
+
+To add base, top-level styles to the `<body>` element, use `theme.styles.root`.
+
+```js
+// example with root styles
+{
+  fonts: {
+    body: 'system-ui, sans-serif',
+    heading: 'Georgia, serif',
+  },
+  fontWeights: {
+    body: 400,
+    heading: 700,
+  },
+  styles: {
+    root: {
+      // uses the theme values provided above
+      fontFamily: 'body',
+      fontWeight: 'body',
+    },
+  },
+}
+```
+
+To disable applying styles to the `<body>` element, add the `useBodyStyles: false` flag to your theme.
+
+## Breakpoints
+
+To configure the default breakpoints used in responsive array values, add a `breakpoints` array to your theme.
+Each breakpoint should be a string with a CSS length unit included.
+These values will be used to generate mobile-first (i.e. `min-width`) media queries, which can then be used to apply [responsive styles](/sx-prop/#responsive-values).
+
+```js
+// example custom breakpoints
+{
+  breakpoints: [
+    '40em', '56em', '64em',
+  ],
+}
+```
+
+## Configuration Flags
+
+The theme object can also include configuration options for Theme UI. The following keys can be used to enable and disable certain features.
+
+Flag | Default | Description
+---|---|---
+`useCustomProperties` | `true` | Enables CSS custom properties to help mitigate a flash of unstyled content during rehydration
+`useBodyStyles` | `true` | Adds styles defined in `theme.styles.root` to the `<body>` element along with `color` and `background-color`
+`initialColorModeName` | `'default'` | The key used for the top-level color palette in `theme.colors`
+`useColorSchemeMediaQuery` | `false` | Initializes the color mode based on the `prefers-color-scheme` media query
+`useBoxSizing` | `true` | Adds a global `box-sizing: border-box` style
+
+## Example Theme
+
+The following example is from the [Base Preset][example].
+
+```js
+// example base theme from @theme-ui/presets
+export const theme = {
+  breakpoints: ['40em', '52em', '64em'],
+  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+  fonts: {
+    body: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
+    heading: 'inherit',
+    monospace: 'Menlo, monospace',
+  },
+  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
+  fontWeights: {
+    body: 400,
+    heading: 700,
+    bold: 700,
+  },
+  lineHeights: {
+    body: 1.5,
+    heading: 1.125,
+  },
+  colors: {
+    text: '#000',
+    background: '#fff',
+    primary: '#07c',
+    secondary: '#30c',
+    muted: '#f6f6f6',
+  },
+  text: {
+    heading: {
+      fontFamily: 'heading',
+      lineHeight: 'heading',
+      fontWeight: 'heading',
+    },
+  },
+  styles: {
+    root: {
+      fontFamily: 'body',
+      lineHeight: 'body',
+      fontWeight: 'body',
+    },
+    h1: {
+      variant: 'text.heading',
+      fontSize: 5,
+    },
+    h2: {
+      variant: 'text.heading',
+      fontSize: 4,
+    },
+    h3: {
+      variant: 'text.heading',
+      fontSize: 3,
+    },
+    h4: {
+      variant: 'text.heading',
+      fontSize: 2,
+    },
+    h5: {
+      variant: 'text.heading',
+      fontSize: 1,
+    },
+    h6: {
+      variant: 'text.heading',
+      fontSize: 0,
+    },
+    pre: {
+      fontFamily: 'monospace',
+      overflowX: 'auto',
+      code: {
+        color: 'inherit',
+      },
+    },
+    code: {
+      fontFamily: 'monospace',
+      fontSize: 'inherit',
+    },
+    table: {
+      width: '100%',
+      borderCollapse: 'separate',
+      borderSpacing: 0,
+    },
+    th: {
+      textAlign: 'left',
+      borderBottomStyle: 'solid',
+    },
+    td: {
+      textAlign: 'left',
+      borderBottomStyle: 'solid',
+    },
+  },
+}
+```
+
+For more information on the Theme UI `theme` object, see the [Theme Specification docs](/theme-spec).
+
+[example]: https://github.com/system-ui/theme-ui/tree/master/packages/preset-base/src/index.js
+[emotion]: https://emotion.sh
