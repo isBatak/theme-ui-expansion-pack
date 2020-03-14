@@ -75,7 +75,7 @@ export const Layout: FC<ILayoutProps> = (props) => {
             </NextLink>
           </Flex>
           <Flex>
-            <NavLink href="https://github.com/system-ui/theme-ui">GitHub</NavLink>
+            <NavLink href="https://github.com/isBatak/theme-ui-expansion-pack">GitHub</NavLink>
             <Button
               sx={{
                 ml: 2,

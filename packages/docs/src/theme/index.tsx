@@ -44,6 +44,9 @@ export default {
     sidebar: 256,
     container: 1024,
   },
+  radii: {
+    default: '4px',
+  },
   text: {
     heading: {
       fontFamily: 'heading',
