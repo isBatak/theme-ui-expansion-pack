@@ -25,7 +25,7 @@ export default {
     },
   },
   fonts: {
-    body: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
+    body: '"GT Haptik", Helvetica, Arial, sans-serif',
     heading: 'inherit',
     monospace: 'Menlo, monospace',
   },
