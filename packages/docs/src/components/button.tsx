@@ -1,7 +1,7 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
+import { jsx } from 'theme-ui';
 
-export default props => (
+export default (props) => (
   <button
     {...props}
     sx={{
@@ -21,4 +21,4 @@ export default props => (
       },
     }}
   />
-)
+);

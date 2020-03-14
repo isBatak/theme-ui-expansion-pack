@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
+import { jsx } from 'theme-ui';
 
 const Burger = ({ size = '1em' }) => (
   <svg
@@ -11,12 +11,13 @@ const Burger = ({ size = '1em' }) => (
     sx={{
       display: 'block',
       margin: 0,
-    }}>
+    }}
+  >
     <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
   </svg>
-)
+);
 
-export default props => (
+export default (props) => (
   <button
     title="Toggle Menu"
     {...props}
@@ -37,7 +38,8 @@ export default props => (
       '@media screen and (min-width: 40em)': {
         display: 'none',
       },
-    }}>
+    }}
+  >
     <Burger />
   </button>
-)
+);
