@@ -1,27 +1,35 @@
 {
   "private": true,
   "scripts": {
+    "bootstrap": "npm run clean && lerna bootstrap --hoist",
+    "ep:dev": "lerna run --scope=theme-ui-expansion-pack watch --stream",
+    "ep:build": "lerna run --scope=theme-ui-expansion-pack build --stream",
+    "reboot:ep": "npm run ep:build && npm run bootstrap",
+    "docs:dev": "lerna run --scope=docs dev --stream",
+    "docs:build": "lerna run --scope=docs build --stream",
+    "docs:start": "lerna run --scope=docs start --stream",
     "prepare": "lerna run prepare",
-    "clean": "lerna run clean",
+    "clean": "lerna clean --yes",
     "format": "prettier --write \"**/*.js{,on}\" \"**/*.md\"  \"**/*.mdx\"",
-    "test": "jest",
-    "docs:dev": "lerna run dev --scope=docs"
+    "test": "jest"
   },
   "workspaces": [
-    "packages/*",
-    "examples/*"
+    "packages/*"
   ],
   "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.5",
-    "@babel/plugin-transform-runtime": "^7.7.6",
-    "@babel/preset-env": "^7.4.5",
-    "@babel/preset-react": "^7.0.0",
-    "@babel/preset-typescript": "^7.8.3",
-    "@babel/runtime": "^7.7.7",
-    "@testing-library/react": "^9.1.3",
+    "@testing-library/react": "^10.0.1",
     "@types/jest": "^25.1.2",
+    "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "@typescript-eslint/parser": "^2.23.0",
+    "babel-eslint": "^10.1.0",
     "babel-jest": "^24.9.0",
+    "eslint": "^6.8.0",
+    "eslint-config-react-app": "^5.2.0",
+    "eslint-plugin-flowtype": "^4.6.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.0",
     "husky": ">=4.0.7",
     "jest": "^24.8.0",
     "jest-canvas-mock": "^2.2.0",
@@ -55,10 +63,6 @@
     ],
     "testPathIgnorePatterns": [
       "/node_modules/",
-      "/fixtures/",
-      "/presets/",
-      "/style-guide/",
-      "tailwind.config.js",
       "/dist/"
     ],
     "coverageReporters": [
@@ -68,13 +72,7 @@
     ],
     "collectCoverageFrom": [
       "packages/**/src/**/*.{js,ts,tsx}",
-      "!packages/docs/**/*",
-      "!packages/presets/**/*",
-      "!packages/style-guide/**/*",
-      "!packages/gatsby-theme-style-guide/**/*",
-      "!packages/chrome/**/*",
-      "!packages/gatsby-theme-*/**/*",
-      "!packages/preset-*/**/*"
+      "!packages/docs/**/*"
     ],
     "coverageThreshold": {
       "global": {

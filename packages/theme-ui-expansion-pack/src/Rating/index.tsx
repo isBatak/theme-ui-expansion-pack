@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 import ReactRating, { RatingComponentProps } from 'react-rating';
-import { Box } from '@theme-ui/components';
+import { Box } from 'theme-ui';
 import LockIcon from '../../../assets/icons/icon-lock.svg';
 
 interface IExtendedRatingComponentProps extends Omit<RatingComponentProps, 'initialRating'> {
@@ -27,5 +27,3 @@ export const SecurityRating = forwardRef<any, IExtendedRatingComponentProps>(({ 
     />
   );
 });
-
-// TODO: StarRating
