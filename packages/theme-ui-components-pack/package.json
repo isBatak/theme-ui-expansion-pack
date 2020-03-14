@@ -8,14 +8,13 @@
     "prepare": "microbundle --no-compress --jsx React.createElement",
     "watch": "microbundle watch --no-compress --jsx React.createElement"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "peerDependencies": {
     "react": "^16.8.0"
   },
   "publishConfig": {
     "access": "public"
   },
-  "author": "Ivica Batinic <ivicabatinic123@gmail.com",
+  "author": "Ivica Batinić <ivicabatinic123@gmail.com",
   "license": "MIT"
 }
