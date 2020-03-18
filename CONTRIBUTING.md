@@ -12,24 +12,23 @@ so please be patient if a particular feature takes longer to review than others.
 
 ## Local Development
 
-This repo uses [Yarn Workspaces][] and [Lerna][] to develop multiple packages together as a monorepo.
-Be sure to install [Yarn][] before setting up the development environment.
+This repo uses [npm][] and [Lerna][] to develop multiple packages together as a monorepo.
 
 Install dependencies and link local packages in the root directory:
 
 ```sh
-yarn
+npm install
 ```
 
-After yarn has linked packages and installed dependences in the repo you can run the docs or an
+After npm has linked packages and installed dependences in the repo you can run the docs or an
 example site in the workspace with this command:
 
 ```sh
 yarn start <name-of-package>
 ```
 
-Where name of package is something like `docs` or `gatsby-theme-ui-example` (one of the packages
-listed by yarn when you run the `yarn workspaces info` command)
+Where name of package is something like `docs` or `theme-ui-expansion-pack` (one of the packages
+listed by lerna when you run the `lerna list` command)
 
 ## Tests
 
@@ -52,7 +51,5 @@ yarn test --watch
 When opening a pull request, please be sure to update any relevant documentation in the READMEs or in the `packages/docs` directory.
 Also include a high-level list of changes in the [CHANGELOG.md](CHANGELOG.md) file at the top under the `## Unreleased` heading.
 
-[yarn]: https://yarnpkg.com
-[yarn workspaces]: https://yarnpkg.com/en/docs/workspaces
 [lerna]: https://github.com/lerna/lerna
 [jest]: https://jestjs.io/

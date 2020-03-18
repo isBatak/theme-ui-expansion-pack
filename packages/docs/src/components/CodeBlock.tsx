@@ -4,11 +4,12 @@ import darkTheme from 'prism-react-renderer/themes/nightOwl';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import { mdx } from '@mdx-js/react';
 import * as ThemeUi from 'theme-ui';
-// import * as ThemeUiExpansionPack from 'theme-ui-expansion-pack';
+import * as ThemeUiExpansionPack from 'theme-ui-expansion-pack';
 import * as ReactIcons from 'react-icons/md';
+import Lorem from 'react-lorem-component';
 
-const ThemeUiExpansionPack = {};
-const { Box, Button } = ThemeUi;
+const { Button, ...restThemeUi } = ThemeUi;
+const { Box } = restThemeUi;
 
 export const liveEditorStyle = {
   fontSize: '14',
@@ -67,7 +68,7 @@ export const CodeBlock = ({ className, live = true, isManual, render, children, 
     language,
     code: editorCode,
     transformCode: (code) => '/** @jsx mdx */' + code,
-    scope: { ...ThemeUi, ...ThemeUiExpansionPack, ...ReactIcons, mdx, StarIcon },
+    scope: { ...restThemeUi, ...ThemeUiExpansionPack, ...ReactIcons, Lorem, mdx, StarIcon },
     noInline: isManual,
     ...props,
   };

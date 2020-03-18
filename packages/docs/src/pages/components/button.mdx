@@ -31,18 +31,10 @@ Use the `size` prop to change the size of the button. You can set the value to
 
 ```jsx
 <ButtonGroup spacing={4}>
-  <Button variantColor="teal" size="xs">
-    Button
-  </Button>
-  <Button variantColor="teal" size="sm">
-    Button
-  </Button>
-  <Button variantColor="teal" size="md">
-    Button
-  </Button>
-  <Button variantColor="teal" size="lg">
-    Button
-  </Button>
+  <Button size="xs">Button</Button>
+  <Button size="sm">Button</Button>
+  <Button size="md">Button</Button>
+  <Button size="lg">Button</Button>
 </ButtonGroup>
 ```
 
@@ -53,50 +45,22 @@ value to `solid`, `ghost`, `outline`, or `link`.
 
 ```jsx
 <ButtonGroup spacing={4}>
-  <Button variantColor="teal" variant="solid">
-    <Lorem count={2} />
-  </Button>
-  <Button variantColor="teal" variant="outline">
-    Button
-  </Button>
-  <Button variantColor="teal" variant="ghost">
-    Button
-  </Button>
-  <Button variantColor="teal" variant="link">
-    Button
-  </Button>
+  <Button variant="primary">Button</Button>
+  <Button variant="secondary">Button</Button>
 </ButtonGroup>
 ```
 
 ### Button with Icon
 
-You can add left and right icons to the Button components.
-[See how to add icons](/icon) to your project
-
-```jsx
-<ButtonGroup spacing={4}>
-  <Button leftIcon="email" variantColor="teal" variant="solid">
-    Email
-  </Button>
-  <Button rightIcon="arrow-forward" variantColor="teal" variant="outline">
-    Call us
-  </Button>
-</ButtonGroup>
-```
-
-You can also use icons from popular libraries like
+You can add left and right icons to the Button components from popular libraries like
 [react-icons](https://react-icons.netlify.com) and just pass it into the button.
 
 ```jsx
 // -> import {MdBuild , MdCall} from "react-icons/md"
-<Box>
-  <Button>
-    <MdBuild /> Settings
-  </Button>
-  <Button>
-    <MdCall /> Call us
-  </Button>
-</Box>
+<ButtonGroup spacing={4}>
+  <Button leftIcon={MdBuild}>Email</Button>
+  <Button rightIcon={MdCall}>Call us</Button>
+</ButtonGroup>
 ```
 
 ### Button loading state
@@ -108,12 +72,8 @@ text label and show only the spinner
 
 ```jsx
 <ButtonGroup spacing={4}>
-  <Button isLoading variantColor="teal" variant="solid">
-    Email
-  </Button>
-  <Button isLoading loadingText="Submitting" variantColor="teal" variant="outline">
-    Submit
-  </Button>
+  <Button isLoading>Email</Button>
+  <Button isLoading>Submit</Button>
 </ButtonGroup>
 ```
 

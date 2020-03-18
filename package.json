@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "bootstrap": "npm run clean && lerna bootstrap --hoist",
-    "ep:dev": "lerna run --scope=theme-ui-expansion-pack watch --stream",
+    "ep:dev": "lerna run --scope=theme-ui-expansion-pack start --stream",
     "ep:build": "lerna run --scope=theme-ui-expansion-pack build --stream",
     "reboot:ep": "npm run ep:build && npm run bootstrap",
     "docs:dev": "lerna run --scope=docs dev --stream",
@@ -13,9 +13,6 @@
     "format": "prettier --write \"**/*.js{,on}\" \"**/*.md\"  \"**/*.mdx\"",
     "test": "jest"
   },
-  "workspaces": [
-    "packages/*"
-  ],
   "devDependencies": {
     "@testing-library/react": "^10.0.1",
     "@types/jest": "^25.1.2",
@@ -37,7 +34,6 @@
     "jest-mock-console": "^1.0.0",
     "lerna": "^3.14.1",
     "lint-staged": "10",
-    "microbundle": "^0.11.0",
     "prettier": "^1.18.2",
     "react-test-renderer": "^16.8.6",
     "ts-jest": "^25.2.0"

@@ -13,7 +13,7 @@ export const Button = forwardRef<HTMLButtonElement, IButtonProps>(
       <ThemeUIButton ref={ref} sx={{ position: 'relative', px: 4, py: [3, 2], ...sx }} {...rest}>
         <Text
           as="span"
-          style={{ visibility: isLoading ? 'hidden' : null }}
+          style={{ visibility: isLoading ? 'hidden' : undefined }}
           sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
         >
           {leftIcon && <Box as={leftIcon} mr={2} />}
