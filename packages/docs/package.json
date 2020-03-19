@@ -8,7 +8,9 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next export",
+    "deploy": "next build && next export && touch out/.nojekyll && gh-pages -d out --dotfiles"
   },
   "dependencies": {
     "@mdx-js/loader": "^1.5.7",
@@ -27,5 +29,7 @@
     "react-lorem-component": "^0.13.0",
     "theme-ui-expansion-pack": "^0.1.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
+  }
 }

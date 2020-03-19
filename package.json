@@ -8,6 +8,7 @@
     "docs:dev": "lerna run --scope=docs dev --stream",
     "docs:build": "lerna run --scope=docs build --stream",
     "docs:start": "lerna run --scope=docs start --stream",
+    "docs:deploy": "lerna run --scope=docs deploy --stream",
     "prepare": "lerna run prepare",
     "clean": "lerna clean --yes",
     "format": "prettier --write \"**/*.js{,on}\" \"**/*.md\"  \"**/*.mdx\"",
