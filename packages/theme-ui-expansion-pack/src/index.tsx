@@ -1,7 +1,7 @@
 // export * from './Accordion';
 export * from './Button';
 export * from './ButtonGroup';
-// export * from './Dummy';
+export * from './Dummy';
 // export * from './FooterDrawer';
 // export * from './InputGroup';
 // export * from './Rating';

@@ -1,11 +1,11 @@
 import React, { forwardRef } from 'react';
-import { Box, BoxProps } from 'theme-ui';
+import { Box, BoxProps, ResponsiveStyleValue } from 'theme-ui';
 
 interface IButtonGroup extends BoxProps {
-  spacing?: any;
+  spacing?: ResponsiveStyleValue<number | string>;
 }
 
-export const ButtonGroup = forwardRef<HTMLDivElement, IButtonGroup>(({ sx, spacing, ...rest }, ref) => (
+export const ButtonGroup = forwardRef<HTMLDivElement, IButtonGroup>(({ sx, spacing = 2, ...rest }, ref) => (
   <Box
     ref={ref}
     sx={{

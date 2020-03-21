@@ -8,8 +8,8 @@ export default {
     secondary: '#BD0101',
     muted: '#f6f6f6',
     highlight: '#f6f6f6',
-    gray: '#777777',
-    accent: '#660099',
+    gray: '#757575',
+    neutral: '#757575',
     darken: 'rgba(0, 0, 0, .25)',
     modes: {
       dark: {
@@ -30,6 +30,8 @@ export default {
     monospace: 'Menlo, monospace',
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72],
+  space: [0, 4, 8, 16, 32, 64],
+  breakpoints: ['40em', '56em', '64em'],
   fontWeights: {
     body: 400,
     heading: 800,
