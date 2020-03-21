@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, css, ThemeProvider } from 'theme-ui';
 import { MDXProvider } from '@mdx-js/react';
-import React, { useState, Fragment, forwardRef, FC } from 'react';
+import { Fragment, forwardRef, FC } from 'react';
 import { Global } from '@emotion/core';
 import merge from 'deepmerge';
 

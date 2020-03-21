@@ -8,7 +8,7 @@ import MenuButton from './menu-button';
 import { SidebarNavLink } from './SidebarNavLink';
 import Button from './button';
 import Sidebar from '../sidebar.mdx';
-import { SideNav } from './Sidenav';
+import { SideNav } from './SideNav';
 import { SidebarNavHeading } from './SidebarNavHeading';
 
 const modes = ['default', 'dark'];
