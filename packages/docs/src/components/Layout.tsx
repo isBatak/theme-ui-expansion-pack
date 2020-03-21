@@ -2,19 +2,25 @@
 import { jsx, Styled, useColorMode, Flex, Box, NavLink, Label } from 'theme-ui';
 import { FC, useState, useRef } from 'react';
 import NextLink from 'next/link';
-import { Sidenav, AccordionNav } from '@theme-ui/sidenav';
 import { useRouter } from 'next/router';
 
 import MenuButton from './menu-button';
 import { SidebarNavLink } from './SidebarNavLink';
 import Button from './button';
 import Sidebar from '../sidebar.mdx';
+import { SideNav } from './Sidenav';
+import { SidebarNavHeading } from './SidebarNavHeading';
 
 const modes = ['default', 'dark'];
 
 const sidebar = {
-  wrapper: Box,
-  h3: Label,
+  wrapper: SideNav,
+  h1: SidebarNavHeading,
+  h2: SidebarNavHeading,
+  h3: SidebarNavHeading,
+  h4: SidebarNavHeading,
+  h5: SidebarNavHeading,
+  h6: SidebarNavHeading,
   a: SidebarNavLink,
 };
 
