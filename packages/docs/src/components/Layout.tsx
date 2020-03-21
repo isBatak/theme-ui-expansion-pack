@@ -1,20 +1,21 @@
 /** @jsx jsx */
-import { jsx, Styled, useColorMode, Flex, Box } from 'theme-ui';
+import { jsx, Styled, useColorMode, Flex, Box, NavLink, Label } from 'theme-ui';
 import { FC, useState, useRef } from 'react';
 import NextLink from 'next/link';
-import { AccordionNav } from '@theme-ui/sidenav';
+import { Sidenav, AccordionNav } from '@theme-ui/sidenav';
 import { useRouter } from 'next/router';
 
 import MenuButton from './menu-button';
-import NavLink from './nav-link';
+import { SidebarNavLink } from './SidebarNavLink';
 import Button from './button';
 import Sidebar from '../sidebar.mdx';
 
 const modes = ['default', 'dark'];
 
 const sidebar = {
-  wrapper: AccordionNav,
-  a: NavLink,
+  wrapper: Box,
+  h3: Label,
+  a: SidebarNavLink,
 };
 
 const getModeName = (mode) => {
@@ -70,8 +71,8 @@ export const Layout: FC<ILayoutProps> = (props) => {
                 if (navLink) navLink.focus();
               }}
             />
-            <NextLink href="/">
-              <a sx={{ variant: 'links.nav' }}>Theme UI Expansion Pack</a>
+            <NextLink href="/" passHref>
+              <NavLink>Theme UI Expansion Pack</NavLink>
             </NextLink>
           </Flex>
           <Flex>
@@ -111,7 +112,6 @@ export const Layout: FC<ILayoutProps> = (props) => {
               <Sidebar
                 open={menuOpen}
                 components={sidebar}
-                pathname={router.pathname}
                 sx={{
                   display: [null, props.fullwidth ? 'none' : 'block'],
                   width: 256,
