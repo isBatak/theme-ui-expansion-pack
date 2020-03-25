@@ -1,1 +1,0 @@
-self.__BUILD_MANIFEST = (function(a){return {"/components/button":[a],"/components/button-group":[a],"/components/dummy":[a]}}("static\u002Fchunks\u002F9a24a7db355caf98910ec33307d75220b63751ab.5714b5cecc7753bcfb3c.js"));self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
