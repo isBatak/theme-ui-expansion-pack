@@ -2,6 +2,11 @@ import React, { Children, forwardRef } from 'react';
 import { Box, Divider, BoxProps } from 'theme-ui';
 
 const validStackComponents = ['div', 'ol', 'ul'] as const;
+const alignDictionary = {
+  left: 'flex-start',
+  center: 'center',
+  right: 'flex-end',
+};
 
 interface IStackProps extends BoxProps {
   component: 'div' | 'ol' | 'ul';
@@ -32,10 +37,10 @@ export const Stack = forwardRef<HTMLDivElement, IStackProps>(
                 ? {
                     display: 'flex',
                     flexDirection: 'column',
-                    alignItems: align,
+                    alignItems: alignDictionary[align],
                     pb: spacing,
                     '&:last-of-type': {
-                      pb: 'none',
+                      pb: 0,
                     },
                   }
                 : undefined
