@@ -9,25 +9,25 @@ const alignDictionary = {
 };
 
 interface IStackProps extends BoxProps {
-  component: 'div' | 'ol' | 'ul';
+  as: 'div' | 'ol' | 'ul';
   spacing: any;
   align?: 'left' | 'right' | 'center';
   dividers?: boolean;
 }
 
 export const Stack = forwardRef<HTMLDivElement, IStackProps>(
-  ({ component = 'div', children, spacing, align = 'left', dividers = false, ...rest }, ref) => {
-    if (process.env.NODE_ENV === 'development' && !validStackComponents.includes(component)) {
-      throw new Error(`Invalid Stack component: ${component}`);
+  ({ as = 'div', children, spacing, align = 'left', dividers = false, ...rest }, ref) => {
+    if (process.env.NODE_ENV === 'development' && !validStackComponents.includes(as)) {
+      throw new Error(`Invalid Stack component: ${as}`);
     }
 
     const stackItems = Children.toArray(children);
 
-    const isList = component === 'ol' || component === 'ul';
+    const isList = as === 'ol' || as === 'ul';
     const stackItemComponent = isList ? 'li' : 'div';
 
     return (
-      <Box ref={ref} {...rest}>
+      <Box ref={ref} as={as} {...rest}>
         {stackItems.map((child, index) => (
           <Box
             as={stackItemComponent}
