@@ -1,0 +1,1 @@
+self.__BUILD_MANIFEST = (function(a){return {"/components/button":[a],"/components/button-group":[a],"/components/dummy":[a],"/components/stack":[a]}}("static\u002Fchunks\u002F56dc64769135df3c25a346dce57967044f9a68b9.5714b5cecc7753bcfb3c.js"));self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()

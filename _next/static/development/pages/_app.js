@@ -51176,6 +51176,11 @@ var Dummy = /*#__PURE__*/React.forwardRef(function (_ref, ref) {
 });
 
 var validStackComponents = ['div', 'ol', 'ul'];
+var alignDictionary = {
+  left: 'flex-start',
+  center: 'center',
+  right: 'flex-end'
+};
 var Stack = /*#__PURE__*/React.forwardRef(function (_ref, ref) {
   var _ref$component = _ref.component,
       component = _ref$component === void 0 ? 'div' : _ref$component,
@@ -51203,10 +51208,10 @@ var Stack = /*#__PURE__*/React.forwardRef(function (_ref, ref) {
       sx: !dividers ? {
         display: 'flex',
         flexDirection: 'column',
-        alignItems: align,
+        alignItems: alignDictionary[align],
         pb: spacing,
         '&:last-of-type': {
-          pb: 'none'
+          pb: 0
         }
       } : undefined
     }, dividers && index > 0 ? React__default.createElement(themeUi.Box, {
