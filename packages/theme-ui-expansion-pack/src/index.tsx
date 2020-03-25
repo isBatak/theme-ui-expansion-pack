@@ -2,6 +2,7 @@
 export * from './Button';
 export * from './ButtonGroup';
 export * from './Dummy';
+export * from './Stack';
 // export * from './FooterDrawer';
 // export * from './InputGroup';
 // export * from './Rating';

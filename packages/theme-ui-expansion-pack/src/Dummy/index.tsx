@@ -12,7 +12,6 @@ export const Dummy = forwardRef<HTMLDivElement, BoxProps>(({ sx, ...rest }, ref)
       display: 'inline-block',
       lineHeight: 'inherit',
       maxWidth: '100%',
-      mr: 2,
       ...sx,
     }}
     {...rest}
