@@ -51182,25 +51182,26 @@ var alignDictionary = {
   right: 'flex-end'
 };
 var Stack = /*#__PURE__*/React.forwardRef(function (_ref, ref) {
-  var _ref$component = _ref.component,
-      component = _ref$component === void 0 ? 'div' : _ref$component,
+  var _ref$as = _ref.as,
+      as = _ref$as === void 0 ? 'div' : _ref$as,
       children = _ref.children,
       spacing = _ref.spacing,
       _ref$align = _ref.align,
       align = _ref$align === void 0 ? 'left' : _ref$align,
       _ref$dividers = _ref.dividers,
       dividers = _ref$dividers === void 0 ? false : _ref$dividers,
-      rest = _objectWithoutPropertiesLoose(_ref, ["component", "children", "spacing", "align", "dividers"]);
+      rest = _objectWithoutPropertiesLoose(_ref, ["as", "children", "spacing", "align", "dividers"]);
 
-  if ( !validStackComponents.includes(component)) {
-    throw new Error("Invalid Stack component: " + component);
+  if ( !validStackComponents.includes(as)) {
+    throw new Error("Invalid Stack component: " + as);
   }
 
   var stackItems = React.Children.toArray(children);
-  var isList = component === 'ol' || component === 'ul';
+  var isList = as === 'ol' || as === 'ul';
   var stackItemComponent = isList ? 'li' : 'div';
   return React__default.createElement(themeUi.Box, Object.assign({
-    ref: ref
+    ref: ref,
+    as: as
   }, rest), stackItems.map(function (child, index) {
     return React__default.createElement(themeUi.Box, {
       as: stackItemComponent,
