@@ -51578,14 +51578,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var theme_ui__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! theme-ui */ "../../node_modules/theme-ui/dist/index.esm.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "../../node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/router */ "../../node_modules/next/dist/client/router.js");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _menu_button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./menu-button */ "./src/components/menu-button.tsx");
-/* harmony import */ var _SidebarNavLink__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./SidebarNavLink */ "./src/components/SidebarNavLink.tsx");
-/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./button */ "./src/components/button.tsx");
-/* harmony import */ var _sidebar_mdx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../sidebar.mdx */ "./src/sidebar.mdx");
-/* harmony import */ var _SideNav__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./SideNav */ "./src/components/SideNav.tsx");
-/* harmony import */ var _SidebarNavHeading__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./SidebarNavHeading */ "./src/components/SidebarNavHeading.tsx");
+/* harmony import */ var _menu_button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./menu-button */ "./src/components/menu-button.tsx");
+/* harmony import */ var _SidebarNavLink__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./SidebarNavLink */ "./src/components/SidebarNavLink.tsx");
+/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./button */ "./src/components/button.tsx");
+/* harmony import */ var _sidebar_mdx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../sidebar.mdx */ "./src/sidebar.mdx");
+/* harmony import */ var _SideNav__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./SideNav */ "./src/components/SideNav.tsx");
+/* harmony import */ var _SidebarNavHeading__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./SidebarNavHeading */ "./src/components/SidebarNavHeading.tsx");
 
 var _jsxFileName = "/Users/ivicabatinic/Documents/projects/DEV_PLAYGROUND/theme-ui-expansion-pack/packages/docs/src/components/Layout.tsx";
 
@@ -51601,17 +51599,16 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
-
 var modes = ['default', 'dark'];
 var sidebar = {
-  wrapper: _SideNav__WEBPACK_IMPORTED_MODULE_9__["SideNav"],
-  h1: _SidebarNavHeading__WEBPACK_IMPORTED_MODULE_10__["SidebarNavHeading"],
-  h2: _SidebarNavHeading__WEBPACK_IMPORTED_MODULE_10__["SidebarNavHeading"],
-  h3: _SidebarNavHeading__WEBPACK_IMPORTED_MODULE_10__["SidebarNavHeading"],
-  h4: _SidebarNavHeading__WEBPACK_IMPORTED_MODULE_10__["SidebarNavHeading"],
-  h5: _SidebarNavHeading__WEBPACK_IMPORTED_MODULE_10__["SidebarNavHeading"],
-  h6: _SidebarNavHeading__WEBPACK_IMPORTED_MODULE_10__["SidebarNavHeading"],
-  a: _SidebarNavLink__WEBPACK_IMPORTED_MODULE_6__["SidebarNavLink"]
+  wrapper: _SideNav__WEBPACK_IMPORTED_MODULE_8__["SideNav"],
+  h1: _SidebarNavHeading__WEBPACK_IMPORTED_MODULE_9__["SidebarNavHeading"],
+  h2: _SidebarNavHeading__WEBPACK_IMPORTED_MODULE_9__["SidebarNavHeading"],
+  h3: _SidebarNavHeading__WEBPACK_IMPORTED_MODULE_9__["SidebarNavHeading"],
+  h4: _SidebarNavHeading__WEBPACK_IMPORTED_MODULE_9__["SidebarNavHeading"],
+  h5: _SidebarNavHeading__WEBPACK_IMPORTED_MODULE_9__["SidebarNavHeading"],
+  h6: _SidebarNavHeading__WEBPACK_IMPORTED_MODULE_9__["SidebarNavHeading"],
+  a: _SidebarNavLink__WEBPACK_IMPORTED_MODULE_5__["SidebarNavLink"]
 };
 
 var getModeName = function getModeName(mode) {
@@ -51639,8 +51636,6 @@ var Layout = function Layout(props) {
       mode = _useColorMode2[0],
       setMode = _useColorMode2[1];
 
-  var router = Object(next_router__WEBPACK_IMPORTED_MODULE_4__["useRouter"])();
-
   var cycleMode = function cycleMode(e) {
     var i = modes.indexOf(mode);
     var next = modes[(i + 1) % modes.length];
@@ -51650,7 +51645,7 @@ var Layout = function Layout(props) {
   return Object(theme_ui__WEBPACK_IMPORTED_MODULE_2__["jsx"])(theme_ui__WEBPACK_IMPORTED_MODULE_2__["Styled"].root, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 54
     },
     __self: this
   }, Object(theme_ui__WEBPACK_IMPORTED_MODULE_2__["jsx"])(theme_ui__WEBPACK_IMPORTED_MODULE_2__["Flex"], {
@@ -51660,7 +51655,7 @@ var Layout = function Layout(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 55
     },
     __self: this
   }, Object(theme_ui__WEBPACK_IMPORTED_MODULE_2__["jsx"])(theme_ui__WEBPACK_IMPORTED_MODULE_2__["Flex"], {
@@ -51673,7 +51668,7 @@ var Layout = function Layout(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 61
     },
     __self: this
   }, Object(theme_ui__WEBPACK_IMPORTED_MODULE_2__["jsx"])(theme_ui__WEBPACK_IMPORTED_MODULE_2__["Flex"], {
@@ -51682,19 +51677,21 @@ var Layout = function Layout(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 70
     },
     __self: this
-  }, Object(theme_ui__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_menu_button__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, Object(theme_ui__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_menu_button__WEBPACK_IMPORTED_MODULE_4__["default"], {
     onClick: function onClick() {
-      setMenuOpen(!menuOpen);
+      setMenuOpen(function (state) {
+        return !state;
+      });
       if (!nav.current) return;
       var navLink = nav.current.querySelector('a');
       if (navLink) navLink.focus();
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 71
     },
     __self: this
   }), Object(theme_ui__WEBPACK_IMPORTED_MODULE_2__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -51702,36 +51699,36 @@ var Layout = function Layout(props) {
     passHref: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 79
     },
     __self: this
   }, Object(theme_ui__WEBPACK_IMPORTED_MODULE_2__["jsx"])(theme_ui__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 80
     },
     __self: this
   }, "Theme UI Expansion Pack"))), Object(theme_ui__WEBPACK_IMPORTED_MODULE_2__["jsx"])(theme_ui__WEBPACK_IMPORTED_MODULE_2__["Flex"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 83
     },
     __self: this
   }, Object(theme_ui__WEBPACK_IMPORTED_MODULE_2__["jsx"])(theme_ui__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
     href: "https://github.com/isBatak/theme-ui-expansion-pack",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 84
     },
     __self: this
-  }, "GitHub"), Object(theme_ui__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_button__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }, "GitHub"), Object(theme_ui__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_button__WEBPACK_IMPORTED_MODULE_6__["default"], {
     sx: {
       ml: 2
     },
     onClick: cycleMode,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 85
     },
     __self: this
   }, getModeName(mode)))), Object(theme_ui__WEBPACK_IMPORTED_MODULE_2__["jsx"])(theme_ui__WEBPACK_IMPORTED_MODULE_2__["Box"], {
@@ -51740,7 +51737,7 @@ var Layout = function Layout(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 95
     },
     __self: this
   }, Object(theme_ui__WEBPACK_IMPORTED_MODULE_2__["jsx"])("div", {
@@ -51749,26 +51746,10 @@ var Layout = function Layout(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 100
     },
     __self: this
-  }, Object(theme_ui__WEBPACK_IMPORTED_MODULE_2__["jsx"])("div", {
-    ref: nav,
-    onFocus: function onFocus(e) {
-      setMenuOpen(true);
-    },
-    onBlur: function onBlur(e) {
-      setMenuOpen(false);
-    },
-    onClick: function onClick(e) {
-      setMenuOpen(false);
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 106
-    },
-    __self: this
-  }, Object(theme_ui__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_sidebar_mdx__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  }, Object(theme_ui__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_sidebar_mdx__WEBPACK_IMPORTED_MODULE_7__["default"], {
     open: menuOpen,
     components: sidebar,
     sx: {
@@ -51782,10 +51763,10 @@ var Layout = function Layout(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 118
+      lineNumber: 105
     },
     __self: this
-  })), Object(theme_ui__WEBPACK_IMPORTED_MODULE_2__["jsx"])("main", {
+  }), Object(theme_ui__WEBPACK_IMPORTED_MODULE_2__["jsx"])("main", {
     id: "content",
     sx: {
       width: '100%',
@@ -51796,7 +51777,7 @@ var Layout = function Layout(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 132
+      lineNumber: 118
     },
     __self: this
   }, props.children)))));
@@ -51991,9 +51972,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var theme_ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! theme-ui */ "../../node_modules/theme-ui/dist/index.esm.js");
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mdx-js/react */ "../../node_modules/@mdx-js/react/dist/esm.js");
-/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @emotion/core */ "../../node_modules/@emotion/core/dist/core.browser.esm.js");
-/* harmony import */ var deepmerge__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! deepmerge */ "../../node_modules/deepmerge/dist/cjs.js");
-/* harmony import */ var deepmerge__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(deepmerge__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var deepmerge__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! deepmerge */ "../../node_modules/deepmerge/dist/cjs.js");
+/* harmony import */ var deepmerge__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(deepmerge__WEBPACK_IMPORTED_MODULE_5__);
 
 
 var _jsxFileName = "/Users/ivicabatinic/Documents/projects/DEV_PLAYGROUND/theme-ui-expansion-pack/packages/docs/src/components/SideNav.tsx";
@@ -52005,55 +51985,16 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
 
-
-
-var Overlay = function Overlay(_ref) {
-  var onClick = _ref.onClick;
-  return Object(theme_ui__WEBPACK_IMPORTED_MODULE_3__["jsx"])(react__WEBPACK_IMPORTED_MODULE_2__["Fragment"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: this
-  }, Object(theme_ui__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
-    onClick: onClick,
-    sx: {
-      position: 'fixed',
-      top: 0,
-      right: 0,
-      bottom: 0,
-      left: 0
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: this
-  }), Object(theme_ui__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["Global"] // @ts-ignore
-  , {
-    styles: Object(theme_ui__WEBPACK_IMPORTED_MODULE_3__["css"])({
-      body: {
-        overflow: ['hidden', 'auto']
-      }
-    }),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: this
-  }));
-};
-
-var SideNav = Object(react__WEBPACK_IMPORTED_MODULE_2__["forwardRef"])(function (_ref2, ref) {
-  var open = _ref2.open,
-      _ref2$styles = _ref2.styles,
-      styles = _ref2$styles === void 0 ? {} : _ref2$styles,
-      components = _ref2.components,
-      props = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref2, ["open", "styles", "components"]);
+var SideNav = Object(react__WEBPACK_IMPORTED_MODULE_2__["forwardRef"])(function (_ref, ref) {
+  var open = _ref.open,
+      _ref$styles = _ref.styles,
+      styles = _ref$styles === void 0 ? {} : _ref$styles,
+      components = _ref.components,
+      props = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, ["open", "styles", "components"]);
 
   return Object(theme_ui__WEBPACK_IMPORTED_MODULE_3__["jsx"])(theme_ui__WEBPACK_IMPORTED_MODULE_3__["ThemeProvider"], {
     theme: {
-      styles: deepmerge__WEBPACK_IMPORTED_MODULE_6___default()({
+      styles: deepmerge__WEBPACK_IMPORTED_MODULE_5___default()({
         ul: {
           listStyle: 'none',
           p: 0,
@@ -52077,20 +52018,14 @@ var SideNav = Object(react__WEBPACK_IMPORTED_MODULE_2__["forwardRef"])(function 
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 15
     },
     __self: this
-  }, open && Object(theme_ui__WEBPACK_IMPORTED_MODULE_3__["jsx"])(Overlay, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 71
-    },
-    __self: this
-  })), Object(theme_ui__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_mdx_js_react__WEBPACK_IMPORTED_MODULE_4__["MDXProvider"], {
+  }, Object(theme_ui__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_mdx_js_react__WEBPACK_IMPORTED_MODULE_4__["MDXProvider"], {
     components: components,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 43
     },
     __self: this
   }, Object(theme_ui__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
@@ -52124,7 +52059,7 @@ var SideNav = Object(react__WEBPACK_IMPORTED_MODULE_2__["forwardRef"])(function 
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 44
     },
     __self: this
   }))));
