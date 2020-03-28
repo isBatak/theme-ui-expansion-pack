@@ -68,7 +68,7 @@ export const CodeBlock = ({ className, live = true, isManual, render, children, 
     language,
     code: editorCode,
     transformCode: (code) => '/** @jsx mdx */' + code,
-    scope: { ...restThemeUi, ...ThemeUiExpansionPack, ...ReactIcons, Lorem, mdx, StarIcon },
+    scope: { ...ThemeUi, ...ThemeUiExpansionPack, ...ReactIcons, Lorem, mdx, StarIcon },
     noInline: isManual,
     ...props,
   };

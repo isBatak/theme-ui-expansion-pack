@@ -7,7 +7,7 @@ interface IButtonProps extends ButtonProps {
   isLoading?: boolean;
 }
 
-export const Button = forwardRef<HTMLButtonElement, IButtonProps>(
+export const ActionButton = forwardRef<HTMLButtonElement, IButtonProps>(
   ({ leftIcon, rightIcon, isLoading, sx, children, ...rest }, ref) => {
     return (
       <ThemeUIButton ref={ref} sx={{ position: 'relative', px: 4, py: [3, 2], ...sx }} {...rest}>

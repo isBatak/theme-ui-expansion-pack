@@ -1,0 +1,54 @@
+import { SEO } from '../../components/SEO';
+
+<SEO title="Action Button" description="Enhanced button component with options to show icons and loading state." />
+
+# Action Button
+
+Enhanced button with options to show icons and loading state.
+
+## Import
+
+```js
+import { ActionButton } from 'theme-ui-expansion-pack';
+```
+
+## Usage
+
+```jsx
+<ActionButton>Button</ActionButton>
+```
+
+### Button Variant
+
+Use the `variant` prop to change the visual style of the Button.
+
+```jsx
+<ButtonGroup spacing={4}>
+  <ActionButton variant="primary">Button</ActionButton>
+  <ActionButton variant="secondary">Button</ActionButton>
+</ButtonGroup>
+```
+
+### Button with Icon
+
+You can add left and right icons to the Button components from popular libraries like
+[react-icons](https://react-icons.netlify.com) and just pass it into the button.
+
+```jsx
+// -> import {MdBuild , MdCall} from "react-icons/md"
+<ButtonGroup spacing={4}>
+  <ActionButton leftIcon={MdBuild}>Email</ActionButton>
+  <ActionButton rightIcon={MdCall}>Call us</ActionButton>
+</ButtonGroup>
+```
+
+### Button loading state
+
+Pass `isLoading` prop to the Button component to show it's loading state.
+
+```jsx
+<ButtonGroup spacing={4}>
+  <ActionButton isLoading>Email</ActionButton>
+  <ActionButton isLoading>Submit</ActionButton>
+</ButtonGroup>
+```
