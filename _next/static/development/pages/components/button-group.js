@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/components/dummy.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/components/button-group.js"],{
 
 /***/ "../../node_modules/@babel/runtime/helpers/assertThisInitialized.js":
 /*!**************************************************************************************************************************************************!*\
@@ -862,21 +862,21 @@ Object.defineProperty(exports,"__esModule",{value:!0}),exports["default"]=void 0
 
 /***/ }),
 
-/***/ "../../node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fcomponents%2Fdummy&absolutePagePath=%2FUsers%2Fivicabatinic%2FDocuments%2Fprojects%2FDEV_PLAYGROUND%2Ftheme-ui-expansion-pack%2Fpackages%2Fdocs%2Fsrc%2Fpages%2Fcomponents%2Fdummy.mdx!./":
-/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** /Users/ivicabatinic/Documents/projects/DEV_PLAYGROUND/theme-ui-expansion-pack/node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fcomponents%2Fdummy&absolutePagePath=%2FUsers%2Fivicabatinic%2FDocuments%2Fprojects%2FDEV_PLAYGROUND%2Ftheme-ui-expansion-pack%2Fpackages%2Fdocs%2Fsrc%2Fpages%2Fcomponents%2Fdummy.mdx ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "../../node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fcomponents%2Fbutton-group&absolutePagePath=%2FUsers%2Fivicabatinic%2FDocuments%2Fprojects%2FDEV_PLAYGROUND%2Ftheme-ui-expansion-pack%2Fpackages%2Fdocs%2Fsrc%2Fpages%2Fcomponents%2Fbutton-group.mdx!./":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** /Users/ivicabatinic/Documents/projects/DEV_PLAYGROUND/theme-ui-expansion-pack/node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fcomponents%2Fbutton-group&absolutePagePath=%2FUsers%2Fivicabatinic%2FDocuments%2Fprojects%2FDEV_PLAYGROUND%2Ftheme-ui-expansion-pack%2Fpackages%2Fdocs%2Fsrc%2Fpages%2Fcomponents%2Fbutton-group.mdx ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/components/dummy", function() {
-      var mod = __webpack_require__(/*! ./src/pages/components/dummy.mdx */ "./src/pages/components/dummy.mdx")
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/components/button-group", function() {
+      var mod = __webpack_require__(/*! ./src/pages/components/button-group.mdx */ "./src/pages/components/button-group.mdx")
       if(true) {
-        module.hot.accept(/*! ./src/pages/components/dummy.mdx */ "./src/pages/components/dummy.mdx", function() {
-          if(!next.router.components["/components/dummy"]) return
-          var updatedPage = __webpack_require__(/*! ./src/pages/components/dummy.mdx */ "./src/pages/components/dummy.mdx")
-          next.router.update("/components/dummy", updatedPage)
+        module.hot.accept(/*! ./src/pages/components/button-group.mdx */ "./src/pages/components/button-group.mdx", function() {
+          if(!next.router.components["/components/button-group"]) return
+          var updatedPage = __webpack_require__(/*! ./src/pages/components/button-group.mdx */ "./src/pages/components/button-group.mdx")
+          next.router.update("/components/button-group", updatedPage)
         })
       }
       return mod
@@ -1570,10 +1570,10 @@ var SEO = function SEO(_ref) {
 
 /***/ }),
 
-/***/ "./src/pages/components/dummy.mdx":
-/*!****************************************!*\
-  !*** ./src/pages/components/dummy.mdx ***!
-  \****************************************/
+/***/ "./src/pages/components/button-group.mdx":
+/*!***********************************************!*\
+  !*** ./src/pages/components/button-group.mdx ***!
+  \***********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1588,7 +1588,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_SEO__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/SEO */ "./src/components/SEO.tsx");
 
 
-var _jsxFileName = "/Users/ivicabatinic/Documents/projects/DEV_PLAYGROUND/theme-ui-expansion-pack/packages/docs/src/pages/components/dummy.mdx";
+var _jsxFileName = "/Users/ivicabatinic/Documents/projects/DEV_PLAYGROUND/theme-ui-expansion-pack/packages/docs/src/pages/components/button-group.mdx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
@@ -1624,7 +1624,7 @@ function MDXContent(_ref) {
     },
     __self: this
   }), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])(_components_SEO__WEBPACK_IMPORTED_MODULE_4__["SEO"], {
-    title: "Dummy",
+    title: "Button Group",
     description: "",
     mdxType: "SEO",
     __source: {
@@ -1638,13 +1638,13 @@ function MDXContent(_ref) {
       lineNumber: 24
     },
     __self: this
-  }, "Dummy"), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("p", {
+  }, "Button Group"), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 25
     },
     __self: this
-  }, "Building block for creating skeleton layout."), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("h2", {
+  }, "TODO: Description"), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("h2", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 26
@@ -1666,7 +1666,7 @@ function MDXContent(_ref) {
       lineNumber: 27
     },
     __self: this
-  }), "import { Dummy } from 'theme-ui-expansion-pack';\n")), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("h2", {
+  }), "import { ButtonGroup } from 'theme-ui-expansion-pack';\n")), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("h2", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 31
@@ -1688,21 +1688,154 @@ function MDXContent(_ref) {
       lineNumber: 32
     },
     __self: this
-  }), "<Card>\n  <Text>\n    <Dummy sx={{ width: '500px' }} />\n    <Dummy sx={{ width: '300px' }} />\n    <Dummy sx={{ width: '400px' }} />\n  </Text>\n</Card>\n")));
+  }), "<ButtonGroup>\n  <Button>Button 1</Button>\n  <Button>Button 2</Button>\n</ButtonGroup>\n")), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("hr", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: this
+  }), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("h2", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: this
+  }, "Props"), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("table", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41
+    },
+    __self: this
+  }, Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("thead", {
+    parentName: "table",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42
+    },
+    __self: this
+  }, Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("tr", {
+    parentName: "thead",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43
+    },
+    __self: this
+  }, Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("th", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
+    parentName: "tr"
+  }, {
+    "align": null
+  }, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
+    },
+    __self: this
+  }), "Name"), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("th", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
+    parentName: "tr"
+  }, {
+    "align": null
+  }, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47
+    },
+    __self: this
+  }), "Type"), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("th", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
+    parentName: "tr"
+  }, {
+    "align": null
+  }, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50
+    },
+    __self: this
+  }), "Default"), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("th", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
+    parentName: "tr"
+  }, {
+    "align": null
+  }, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53
+    },
+    __self: this
+  }), "Description"))), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("tbody", {
+    parentName: "table",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58
+    },
+    __self: this
+  }, Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("tr", {
+    parentName: "tbody",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59
+    },
+    __self: this
+  }, Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("td", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
+    parentName: "tr"
+  }, {
+    "align": null
+  }, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 60
+    },
+    __self: this
+  }), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("inlineCode", {
+    parentName: "td",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 62
+    },
+    __self: this
+  }, "spacing")), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("td", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
+    parentName: "tr"
+  }, {
+    "align": null
+  }, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63
+    },
+    __self: this
+  }), "`ResponsiveStyleValue<number"), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("td", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
+    parentName: "tr"
+  }, {
+    "align": null
+  }, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66
+    },
+    __self: this
+  }), "string>`"), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("td", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
+    parentName: "tr"
+  }, {
+    "align": null
+  }, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 69
+    },
+    __self: this
+  }), "2")))));
 }
 ;
 MDXContent.isMDXComponent = true;
 
 /***/ }),
 
-/***/ 5:
-/*!*************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Fcomponents%2Fdummy&absolutePagePath=%2FUsers%2Fivicabatinic%2FDocuments%2Fprojects%2FDEV_PLAYGROUND%2Ftheme-ui-expansion-pack%2Fpackages%2Fdocs%2Fsrc%2Fpages%2Fcomponents%2Fdummy.mdx ***!
-  \*************************************************************************************************************************************************************************************************************************************/
+/***/ 4:
+/*!***************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fcomponents%2Fbutton-group&absolutePagePath=%2FUsers%2Fivicabatinic%2FDocuments%2Fprojects%2FDEV_PLAYGROUND%2Ftheme-ui-expansion-pack%2Fpackages%2Fdocs%2Fsrc%2Fpages%2Fcomponents%2Fbutton-group.mdx ***!
+  \***************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fcomponents%2Fdummy&absolutePagePath=%2FUsers%2Fivicabatinic%2FDocuments%2Fprojects%2FDEV_PLAYGROUND%2Ftheme-ui-expansion-pack%2Fpackages%2Fdocs%2Fsrc%2Fpages%2Fcomponents%2Fdummy.mdx! */"../../node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fcomponents%2Fdummy&absolutePagePath=%2FUsers%2Fivicabatinic%2FDocuments%2Fprojects%2FDEV_PLAYGROUND%2Ftheme-ui-expansion-pack%2Fpackages%2Fdocs%2Fsrc%2Fpages%2Fcomponents%2Fdummy.mdx!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fcomponents%2Fbutton-group&absolutePagePath=%2FUsers%2Fivicabatinic%2FDocuments%2Fprojects%2FDEV_PLAYGROUND%2Ftheme-ui-expansion-pack%2Fpackages%2Fdocs%2Fsrc%2Fpages%2Fcomponents%2Fbutton-group.mdx! */"../../node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fcomponents%2Fbutton-group&absolutePagePath=%2FUsers%2Fivicabatinic%2FDocuments%2Fprojects%2FDEV_PLAYGROUND%2Ftheme-ui-expansion-pack%2Fpackages%2Fdocs%2Fsrc%2Fpages%2Fcomponents%2Fbutton-group.mdx!./");
 
 
 /***/ }),
@@ -1718,5 +1851,5 @@ module.exports = dll_36cb91a3dffafa9e9b43;
 
 /***/ })
 
-},[[5,"static/runtime/webpack.js"]]]);
-//# sourceMappingURL=dummy.js.map
+},[[4,"static/runtime/webpack.js"]]]);
+//# sourceMappingURL=button-group.js.map

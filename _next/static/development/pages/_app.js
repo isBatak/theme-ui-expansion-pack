@@ -51089,7 +51089,7 @@ function _objectWithoutPropertiesLoose(source, excluded) {
   return target;
 }
 
-var Button = /*#__PURE__*/React.forwardRef(function (_ref, ref) {
+var ActionButton = /*#__PURE__*/React.forwardRef(function (_ref, ref) {
   var leftIcon = _ref.leftIcon,
       rightIcon = _ref.rightIcon,
       isLoading = _ref.isLoading,
@@ -51289,7 +51289,7 @@ var useId = function useId() {
   return id;
 };
 
-exports.Button = Button;
+exports.ActionButton = ActionButton;
 exports.ButtonGroup = ButtonGroup;
 exports.Dummy = Dummy;
 exports.Stack = Stack;
@@ -51455,7 +51455,7 @@ var CodeBlock = function CodeBlock(_ref) {
     transformCode: function transformCode(code) {
       return '/** @jsx mdx */' + code;
     },
-    scope: _objectSpread({}, restThemeUi, {}, theme_ui_expansion_pack__WEBPACK_IMPORTED_MODULE_9__, {}, react_icons_md__WEBPACK_IMPORTED_MODULE_10__, {
+    scope: _objectSpread({}, theme_ui__WEBPACK_IMPORTED_MODULE_8__, {}, theme_ui_expansion_pack__WEBPACK_IMPORTED_MODULE_9__, {}, react_icons_md__WEBPACK_IMPORTED_MODULE_10__, {
       Lorem: react_lorem_component__WEBPACK_IMPORTED_MODULE_11___default.a,
       mdx: _mdx_js_react__WEBPACK_IMPORTED_MODULE_7__["mdx"],
       StarIcon: StarIcon
@@ -52446,14 +52446,14 @@ function MDXContent(_ref) {
   }, Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("a", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
     parentName: "li"
   }, {
-    "href": "/components/button"
+    "href": "/components/action-button"
   }, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 24
     },
     __self: this
-  }), "Button")), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("li", {
+  }), "ActionButton")), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("li", {
     parentName: "ul",
     __source: {
       fileName: _jsxFileName,
