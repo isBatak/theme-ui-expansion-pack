@@ -1,36 +1,8 @@
 /** @jsx jsx */
-import { jsx, css, ThemeProvider } from 'theme-ui';
+import { jsx, ThemeProvider } from 'theme-ui';
 import { MDXProvider } from '@mdx-js/react';
-import { Fragment, forwardRef, FC } from 'react';
-import { Global } from '@emotion/core';
+import { forwardRef } from 'react';
 import merge from 'deepmerge';
-
-interface IOverlayProps {
-  onClick?(): void;
-}
-
-const Overlay: FC<IOverlayProps> = ({ onClick }) => (
-  <Fragment>
-    <div
-      onClick={onClick}
-      sx={{
-        position: 'fixed',
-        top: 0,
-        right: 0,
-        bottom: 0,
-        left: 0,
-      }}
-    />
-    <Global
-      // @ts-ignore
-      styles={css({
-        body: {
-          overflow: ['hidden', 'auto'],
-        },
-      })}
-    />
-  </Fragment>
-);
 
 interface ISideNavProps {
   open?: boolean;
@@ -68,7 +40,6 @@ export const SideNav = forwardRef<HTMLDivElement, ISideNavProps>(({ open, styles
         ),
       }}
     >
-      {open && <Overlay {...props} />}
       <MDXProvider components={components}>
         <div
           {...props}
