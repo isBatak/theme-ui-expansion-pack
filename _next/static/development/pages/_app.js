@@ -51876,7 +51876,7 @@ var Meta = function Meta() {
   }, __jsx("link", {
     rel: "apple-touch-icon",
     sizes: "180x180",
-    href: "/favicon/apple-touch-icon.png",
+    href: "/theme-ui-expansion-pack/favicon/apple-touch-icon.png",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
@@ -51886,7 +51886,7 @@ var Meta = function Meta() {
     rel: "icon",
     type: "image/png",
     sizes: "32x32",
-    href: "/favicon/favicon-32x32.png",
+    href: "/theme-ui-expansion-pack/favicon/favicon-32x32.png",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
@@ -51896,7 +51896,7 @@ var Meta = function Meta() {
     rel: "icon",
     type: "image/png",
     sizes: "16x16",
-    href: "/favicon/favicon-16x16.png",
+    href: "/theme-ui-expansion-pack/favicon/favicon-16x16.png",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
@@ -51904,7 +51904,7 @@ var Meta = function Meta() {
     __self: this
   }), __jsx("link", {
     rel: "manifest",
-    href: "/favicon/site.webmanifest",
+    href: "/theme-ui-expansion-pack/favicon/site.webmanifest",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
@@ -51912,7 +51912,7 @@ var Meta = function Meta() {
     __self: this
   }), __jsx("link", {
     rel: "mask-icon",
-    href: "/favicon/safari-pinned-tab.svg",
+    href: "/theme-ui-expansion-pack/favicon/safari-pinned-tab.svg",
     color: "#000000",
     __source: {
       fileName: _jsxFileName,
@@ -51921,7 +51921,7 @@ var Meta = function Meta() {
     __self: this
   }), __jsx("link", {
     rel: "shortcut icon",
-    href: "/favicon/favicon.ico",
+    href: "/theme-ui-expansion-pack/favicon/favicon.ico",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15
@@ -51937,7 +51937,7 @@ var Meta = function Meta() {
     __self: this
   }), __jsx("meta", {
     name: "msapplication-config",
-    content: "/favicon/browserconfig.xml",
+    content: "/theme-ui-expansion-pack/favicon/browserconfig.xml",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17
