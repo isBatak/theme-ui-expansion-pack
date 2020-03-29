@@ -52533,17 +52533,16 @@ __webpack_require__.r(__webpack_exports__);
     highlight: '#f6f6f6',
     gray: '#757575',
     neutral: '#757575',
-    darken: 'rgba(0, 0, 0, .25)',
     modes: {
       dark: {
         text: '#ffffff',
-        background: '#060606',
+        background: '#121212',
         primary: '#D8262C',
         secondary: '#BD0101',
         muted: '#191919',
-        highlight: '#29112c',
-        gray: '#999999',
-        accent: '#cc00ff'
+        highlight: '#292929',
+        gray: '#1a1a1a',
+        neutral: '#1a1a1a'
       }
     }
   },
@@ -52600,14 +52599,6 @@ __webpack_require__.r(__webpack_exports__);
       variant: 'buttons.primary',
       color: 'background',
       bg: 'secondary'
-    },
-    black: {
-      fontWeight: 'bold',
-      color: 'background',
-      bg: 'text',
-      '&:hover, &:focus': {
-        bg: 'primary'
-      }
     }
   },
   links: {
@@ -52841,11 +52832,6 @@ __webpack_require__.r(__webpack_exports__);
       border: 0,
       borderBottom: '1px solid',
       borderColor: 'muted'
-    },
-    xray: {
-      '*': {
-        outline: '1px solid rgba(0, 192, 255, .25)'
-      }
     },
     navlink: {
       display: 'inline-block',
