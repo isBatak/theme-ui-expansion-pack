@@ -3,13 +3,14 @@
 export default {
   colors: {
     text: '#353535',
+    textInverted: '#ffffff',
     background: '#ffffff',
     primary: '#D8262C',
     secondary: '#BD0101',
     muted: '#f6f6f6',
     highlight: '#f6f6f6',
-    gray: '#757575',
-    neutral: '#757575',
+    gray: '#b0b0b0',
+    neutral: '#b0b0b0',
     neutrals: {
       10: '#121212',
       20: '#1a1a1a',
@@ -19,18 +20,19 @@ export default {
     modes: {
       dark: {
         text: '#ffffff',
+        textInverted: '#121212',
         background: '#121212',
         primary: '#D8262C',
         secondary: '#BD0101',
         muted: '#191919',
         highlight: '#292929',
-        gray: '#1a1a1a',
-        neutral: '#1a1a1a',
+        gray: '#b0b0b0',
+        neutral: '#b0b0b0',
         neutrals: {
-          10: '#121212',
-          20: '#1a1a1a',
-          30: '#292929',
-          40: '#333333',
+          10: '#333333',
+          20: '#292929',
+          30: '#1a1a1a',
+          40: '#121212',
         },
       },
     },

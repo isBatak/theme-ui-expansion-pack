@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import lightTheme from 'prism-react-renderer/themes/nightOwlLight';
-import darkTheme from 'prism-react-renderer/themes/nightOwl';
+import lightTheme from 'prism-react-renderer/themes/github';
+import darkTheme from 'prism-react-renderer/themes/vsDark';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import { mdx } from '@mdx-js/react';
 import * as ThemeUi from 'theme-ui';
@@ -12,12 +12,12 @@ const { Button, ...restThemeUi } = ThemeUi;
 const { Box } = restThemeUi;
 
 export const liveEditorStyle = {
-  fontSize: '14',
-  marginBottom: '32',
-  marginTop: '32',
+  fontSize: '14px',
+  marginBottom: '32px',
+  marginTop: '32px',
   overflowX: 'auto',
-  fontFamily: 'Menlo,monospace',
-  borderRadius: '10',
+  fontFamily: 'Menlo, monospace',
+  borderRadius: '10px',
 };
 
 export const liveErrorStyle = {
@@ -64,12 +64,13 @@ const StarIcon = (props) => {
 
 export const CodeBlock = ({ className, live, isManual, render, children, ...props }) => {
   const [editorCode, setEditorCode] = useState(children.trim());
+  const [mode, _] = ThemeUi.useColorMode();
 
   const language = className && className.replace(/language-/, '');
   // const { onCopy, hasCopied } = useClipboard(editorCode);
 
-  const themes = { light: lightTheme, dark: darkTheme };
-  const theme = themes['dark'];
+  const themes = { default: lightTheme, dark: darkTheme };
+  const theme = themes[mode];
 
   const liveProviderProps = {
     theme,
