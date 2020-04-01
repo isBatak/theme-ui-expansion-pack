@@ -10,6 +10,7 @@ import Button from './button';
 import Sidebar from '../sidebar.mdx';
 import { SideNav } from './SideNav';
 import { SidebarNavHeading } from './SidebarNavHeading';
+import { Head } from './Head';
 
 const modes = ['default', 'dark'];
 
@@ -52,6 +53,7 @@ export const Layout: FC<ILayoutProps> = (props) => {
 
   return (
     <Styled.root>
+      <Head {...props} />
       <Flex
         sx={{
           flexDirection: 'column',
