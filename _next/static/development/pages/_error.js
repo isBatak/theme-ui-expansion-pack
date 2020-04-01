@@ -267,7 +267,7 @@ function unique() {
 }
 /**
  *
- * @param headElement List of multiple <Head> instances
+ * @param headElements List of multiple <Head> instances
  */
 
 
@@ -807,23 +807,23 @@ module.exports = _typeof;
 
 /***/ "../../node_modules/react/index.js":
 /*!***********************************************************************************************!*\
-  !*** delegated ../../node_modules/react/index.js from dll-reference dll_36cb91a3dffafa9e9b43 ***!
+  !*** delegated ../../node_modules/react/index.js from dll-reference dll_ac484cc38301a79dbc35 ***!
   \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_36cb91a3dffafa9e9b43 */ "dll-reference dll_36cb91a3dffafa9e9b43"))("../../node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_ac484cc38301a79dbc35 */ "dll-reference dll_ac484cc38301a79dbc35"))("../../node_modules/react/index.js");
 
 /***/ }),
 
-/***/ "dll-reference dll_36cb91a3dffafa9e9b43":
+/***/ "dll-reference dll_ac484cc38301a79dbc35":
 /*!*******************************************!*\
-  !*** external "dll_36cb91a3dffafa9e9b43" ***!
+  !*** external "dll_ac484cc38301a79dbc35" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_36cb91a3dffafa9e9b43;
+module.exports = dll_ac484cc38301a79dbc35;
 
 /***/ })
 
