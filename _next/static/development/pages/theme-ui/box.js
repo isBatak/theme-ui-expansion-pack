@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/common-strategies/component-selector.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/theme-ui/box.js"],{
 
 /***/ "../../node_modules/@babel/runtime/helpers/esm/extends.js":
 /*!****************************************************************************************************************************************!*\
@@ -308,21 +308,21 @@ function createElement (type, props) {
 
 /***/ }),
 
-/***/ "../../node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fcommon-strategies%2Fcomponent-selector&absolutePagePath=%2FUsers%2Fivicabatinic%2FDocuments%2Fprojects%2FDEV_PLAYGROUND%2Ftheme-ui-expansion-pack%2Fpackages%2Fdocs%2Fsrc%2Fpages%2Fcommon-strategies%2Fcomponent-selector.mdx!./":
-/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** /Users/ivicabatinic/Documents/projects/DEV_PLAYGROUND/theme-ui-expansion-pack/node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fcommon-strategies%2Fcomponent-selector&absolutePagePath=%2FUsers%2Fivicabatinic%2FDocuments%2Fprojects%2FDEV_PLAYGROUND%2Ftheme-ui-expansion-pack%2Fpackages%2Fdocs%2Fsrc%2Fpages%2Fcommon-strategies%2Fcomponent-selector.mdx ***!
-  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "../../node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Ftheme-ui%2Fbox&absolutePagePath=%2FUsers%2Fivicabatinic%2FDocuments%2Fprojects%2FDEV_PLAYGROUND%2Ftheme-ui-expansion-pack%2Fpackages%2Fdocs%2Fsrc%2Fpages%2Ftheme-ui%2Fbox.mdx!./":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** /Users/ivicabatinic/Documents/projects/DEV_PLAYGROUND/theme-ui-expansion-pack/node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Ftheme-ui%2Fbox&absolutePagePath=%2FUsers%2Fivicabatinic%2FDocuments%2Fprojects%2FDEV_PLAYGROUND%2Ftheme-ui-expansion-pack%2Fpackages%2Fdocs%2Fsrc%2Fpages%2Ftheme-ui%2Fbox.mdx ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/common-strategies/component-selector", function() {
-      var mod = __webpack_require__(/*! ./src/pages/common-strategies/component-selector.mdx */ "./src/pages/common-strategies/component-selector.mdx")
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/theme-ui/box", function() {
+      var mod = __webpack_require__(/*! ./src/pages/theme-ui/box.mdx */ "./src/pages/theme-ui/box.mdx")
       if(true) {
-        module.hot.accept(/*! ./src/pages/common-strategies/component-selector.mdx */ "./src/pages/common-strategies/component-selector.mdx", function() {
-          if(!next.router.components["/common-strategies/component-selector"]) return
-          var updatedPage = __webpack_require__(/*! ./src/pages/common-strategies/component-selector.mdx */ "./src/pages/common-strategies/component-selector.mdx")
-          next.router.update("/common-strategies/component-selector", updatedPage)
+        module.hot.accept(/*! ./src/pages/theme-ui/box.mdx */ "./src/pages/theme-ui/box.mdx", function() {
+          if(!next.router.components["/theme-ui/box"]) return
+          var updatedPage = __webpack_require__(/*! ./src/pages/theme-ui/box.mdx */ "./src/pages/theme-ui/box.mdx")
+          next.router.update("/theme-ui/box", updatedPage)
         })
       }
       return mod
@@ -342,10 +342,10 @@ module.exports = (__webpack_require__(/*! dll-reference dll_ac484cc38301a79dbc35
 
 /***/ }),
 
-/***/ "./src/pages/common-strategies/component-selector.mdx":
-/*!************************************************************!*\
-  !*** ./src/pages/common-strategies/component-selector.mdx ***!
-  \************************************************************/
+/***/ "./src/pages/theme-ui/box.mdx":
+/*!************************************!*\
+  !*** ./src/pages/theme-ui/box.mdx ***!
+  \************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -359,7 +359,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @mdx-js/react */ "../../node_modules/@mdx-js/react/dist/esm.js");
 
 
-var _jsxFileName = "/Users/ivicabatinic/Documents/projects/DEV_PLAYGROUND/theme-ui-expansion-pack/packages/docs/src/pages/common-strategies/component-selector.mdx";
+var _jsxFileName = "/Users/ivicabatinic/Documents/projects/DEV_PLAYGROUND/theme-ui-expansion-pack/packages/docs/src/pages/theme-ui/box.mdx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
@@ -369,12 +369,11 @@ var makeShortcode = function makeShortcode(name) {
   return function MDXDefaultShortcode(props) {
     console.warn("Component " + name + " was not imported, exported, or provided by MDXProvider as global scope");
     return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("div", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, props, {
-      __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 10,
-        columnNumber: 10
-      }
+        lineNumber: 10
+      },
+      __self: this
     }));
   };
 };
@@ -388,41 +387,64 @@ function MDXContent(_ref) {
   return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])(MDXLayout, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, layoutProps, props, {
     components: components,
     mdxType: "MDXLayout",
-    __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
-      columnNumber: 10
-    }
-  }), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("h1", {
-    __self: this,
+      lineNumber: 21
+    },
+    __self: this
+  }), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("hr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
-      columnNumber: 5
-    }
-  }, "Component Selector"), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("p", {
-    __self: this,
+      lineNumber: 22
+    },
+    __self: this
+  }), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
-      columnNumber: 5
-    }
-  }, "To select child component with CSS use ", Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("inlineCode", {
+      lineNumber: 23
+    },
+    __self: this
+  }, "title: Box"), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("h1", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }, "Box"), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }, "Use the ", Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("inlineCode", {
     parentName: "p",
-    __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
-      columnNumber: 51
-    }
-  }, "data-component"), " data attribute."), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("pre", {
-    __self: this,
+      lineNumber: 25
+    },
+    __self: this
+  }, "Box"), " component as a layout primitive to add margin, padding, and colors to content."), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("pre", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
-      columnNumber: 5
-    }
+      lineNumber: 26
+    },
+    __self: this
+  }, Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("code", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
+    parentName: "pre"
+  }, {
+    "className": "language-js"
+  }, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: this
+  }), "import { Box } from 'theme-ui';\n")), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("pre", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: this
   }, Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("code", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
     parentName: "pre"
   }, {
@@ -430,98 +452,26 @@ function MDXContent(_ref) {
     "metastring": "live=true",
     "live": "true"
   }, {
-    __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
-      columnNumber: 10
-    }
-  }), "<Box sx={{ ':hover > [data-component=\"Icon\"]': { color: 'primary' } }}>\n  <MdBuild data-component=\"Icon\" />\n</Box>\n")), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("p", {
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32,
-      columnNumber: 5
-    }
-  }, "Inspired by:"), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("ul", {
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 33,
-      columnNumber: 5
-    }
-  }, Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("li", {
-    parentName: "ul",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34,
-      columnNumber: 7
-    }
-  }, Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("a", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
-    parentName: "li"
-  }, {
-    "href": "https://react-ui.dev/core-concepts/ideas#Component%20selectors"
-  }, {
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34,
-      columnNumber: 27
-    }
-  }), "https://react-ui.dev/core-concepts/ideas#Component%20selectors")), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("li", {
-    parentName: "ul",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37,
-      columnNumber: 7
-    }
-  }, Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("a", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
-    parentName: "li"
-  }, {
-    "href": "https://react-ui.dev/components/Element#component"
-  }, {
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37,
-      columnNumber: 27
-    }
-  }), "https://react-ui.dev/components/Element#component")), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("li", {
-    parentName: "ul",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 40,
-      columnNumber: 7
-    }
-  }, Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_3__["mdx"])("a", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
-    parentName: "li"
-  }, {
-    "href": "https://reacttraining.com/reach-ui/styling/#element-selectors"
-  }, {
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 40,
-      columnNumber: 27
-    }
-  }), "https://reacttraining.com/reach-ui/styling/#element-selectors"))));
+      lineNumber: 30
+    },
+    __self: this
+  }), "<Box p={4} color=\"white\" bg=\"primary\">\n  Beep\n</Box>\n")));
 }
 ;
 MDXContent.isMDXComponent = true;
 
 /***/ }),
 
-/***/ 1:
-/*!*****************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Fcommon-strategies%2Fcomponent-selector&absolutePagePath=%2FUsers%2Fivicabatinic%2FDocuments%2Fprojects%2FDEV_PLAYGROUND%2Ftheme-ui-expansion-pack%2Fpackages%2Fdocs%2Fsrc%2Fpages%2Fcommon-strategies%2Fcomponent-selector.mdx ***!
-  \*****************************************************************************************************************************************************************************************************************************************************************************/
+/***/ 5:
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Ftheme-ui%2Fbox&absolutePagePath=%2FUsers%2Fivicabatinic%2FDocuments%2Fprojects%2FDEV_PLAYGROUND%2Ftheme-ui-expansion-pack%2Fpackages%2Fdocs%2Fsrc%2Fpages%2Ftheme-ui%2Fbox.mdx ***!
+  \*****************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fcommon-strategies%2Fcomponent-selector&absolutePagePath=%2FUsers%2Fivicabatinic%2FDocuments%2Fprojects%2FDEV_PLAYGROUND%2Ftheme-ui-expansion-pack%2Fpackages%2Fdocs%2Fsrc%2Fpages%2Fcommon-strategies%2Fcomponent-selector.mdx! */"../../node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fcommon-strategies%2Fcomponent-selector&absolutePagePath=%2FUsers%2Fivicabatinic%2FDocuments%2Fprojects%2FDEV_PLAYGROUND%2Ftheme-ui-expansion-pack%2Fpackages%2Fdocs%2Fsrc%2Fpages%2Fcommon-strategies%2Fcomponent-selector.mdx!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Ftheme-ui%2Fbox&absolutePagePath=%2FUsers%2Fivicabatinic%2FDocuments%2Fprojects%2FDEV_PLAYGROUND%2Ftheme-ui-expansion-pack%2Fpackages%2Fdocs%2Fsrc%2Fpages%2Ftheme-ui%2Fbox.mdx! */"../../node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Ftheme-ui%2Fbox&absolutePagePath=%2FUsers%2Fivicabatinic%2FDocuments%2Fprojects%2FDEV_PLAYGROUND%2Ftheme-ui-expansion-pack%2Fpackages%2Fdocs%2Fsrc%2Fpages%2Ftheme-ui%2Fbox.mdx!./");
 
 
 /***/ }),
@@ -537,5 +487,5 @@ module.exports = dll_ac484cc38301a79dbc35;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
-//# sourceMappingURL=component-selector.js.map
+},[[5,"static/runtime/webpack.js"]]]);
+//# sourceMappingURL=box.js.map

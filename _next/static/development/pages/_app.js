@@ -17434,103 +17434,66 @@ var theme = {
 
 /***/ }),
 
-/***/ "../../node_modules/prism-react-renderer/themes/nightOwl/index.js":
-/*!************************************************************************************************************************************************!*\
-  !*** /Users/ivicabatinic/Documents/projects/DEV_PLAYGROUND/theme-ui-expansion-pack/node_modules/prism-react-renderer/themes/nightOwl/index.js ***!
-  \************************************************************************************************************************************************/
+/***/ "../../node_modules/prism-react-renderer/themes/github/index.js":
+/*!**********************************************************************************************************************************************!*\
+  !*** /Users/ivicabatinic/Documents/projects/DEV_PLAYGROUND/theme-ui-expansion-pack/node_modules/prism-react-renderer/themes/github/index.js ***!
+  \**********************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-// Original: https://github.com/sdras/night-owl-vscode-theme
-// Converted automatically using ./tools/themeFromVsCode
+// Original: https://raw.githubusercontent.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css
 var theme = {
   plain: {
-    color: "#d6deeb",
-    backgroundColor: "#011627"
+    color: "#393A34",
+    backgroundColor: "#f6f8fa"
   },
   styles: [{
-    types: ["changed"],
+    types: ["comment", "prolog", "doctype", "cdata"],
     style: {
-      color: "rgb(162, 191, 252)",
+      color: "#999988",
       fontStyle: "italic"
-    }
-  }, {
-    types: ["deleted"],
-    style: {
-      color: "rgba(239, 83, 80, 0.56)",
-      fontStyle: "italic"
-    }
-  }, {
-    types: ["inserted", "attr-name"],
-    style: {
-      color: "rgb(173, 219, 103)",
-      fontStyle: "italic"
-    }
-  }, {
-    types: ["comment"],
-    style: {
-      color: "rgb(99, 119, 119)",
-      fontStyle: "italic"
-    }
-  }, {
-    types: ["string", "url"],
-    style: {
-      color: "rgb(173, 219, 103)"
-    }
-  }, {
-    types: ["variable"],
-    style: {
-      color: "rgb(214, 222, 235)"
-    }
-  }, {
-    types: ["number"],
-    style: {
-      color: "rgb(247, 140, 108)"
-    }
-  }, {
-    types: ["builtin", "char", "constant", "function"],
-    style: {
-      color: "rgb(130, 170, 255)"
-    }
-  }, {
-    // This was manually added after the auto-generation
-    // so that punctuations are not italicised
-    types: ["punctuation"],
-    style: {
-      color: "rgb(199, 146, 234)"
-    }
-  }, {
-    types: ["selector", "doctype"],
-    style: {
-      color: "rgb(199, 146, 234)",
-      fontStyle: "italic"
-    }
-  }, {
-    types: ["class-name"],
-    style: {
-      color: "rgb(255, 203, 139)"
-    }
-  }, {
-    types: ["tag", "operator", "keyword"],
-    style: {
-      color: "rgb(127, 219, 202)"
-    }
-  }, {
-    types: ["boolean"],
-    style: {
-      color: "rgb(255, 88, 116)"
-    }
-  }, {
-    types: ["property"],
-    style: {
-      color: "rgb(128, 203, 196)"
     }
   }, {
     types: ["namespace"],
     style: {
-      color: "rgb(178, 204, 214)"
+      opacity: 0.7
+    }
+  }, {
+    types: ["string", "attr-value"],
+    style: {
+      color: "#e3116c"
+    }
+  }, {
+    types: ["punctuation", "operator"],
+    style: {
+      color: "#393A34"
+    }
+  }, {
+    types: ["entity", "url", "symbol", "number", "boolean", "variable", "constant", "property", "regex", "inserted"],
+    style: {
+      color: "#36acaa"
+    }
+  }, {
+    types: ["atrule", "keyword", "attr-name", "selector"],
+    style: {
+      color: "#00a4db"
+    }
+  }, {
+    types: ["function", "deleted", "tag"],
+    style: {
+      color: "#d73a49"
+    }
+  }, {
+    types: ["function-variable"],
+    style: {
+      color: "#6f42c1"
+    }
+  }, {
+    types: ["tag", "selector", "keyword"],
+    style: {
+      color: "#00009f"
     }
   }]
 };
@@ -17540,93 +17503,100 @@ var theme = {
 
 /***/ }),
 
-/***/ "../../node_modules/prism-react-renderer/themes/nightOwlLight/index.js":
-/*!*****************************************************************************************************************************************************!*\
-  !*** /Users/ivicabatinic/Documents/projects/DEV_PLAYGROUND/theme-ui-expansion-pack/node_modules/prism-react-renderer/themes/nightOwlLight/index.js ***!
-  \*****************************************************************************************************************************************************/
+/***/ "../../node_modules/prism-react-renderer/themes/vsDark/index.js":
+/*!**********************************************************************************************************************************************!*\
+  !*** /Users/ivicabatinic/Documents/projects/DEV_PLAYGROUND/theme-ui-expansion-pack/node_modules/prism-react-renderer/themes/vsDark/index.js ***!
+  \**********************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-// Original: https://github.com/sdras/night-owl-vscode-theme
 // Converted automatically using ./tools/themeFromVsCode
 var theme = {
   plain: {
-    color: "#403f53",
-    backgroundColor: "#FBFBFB"
+    color: "#9CDCFE",
+    backgroundColor: "#1E1E1E"
   },
   styles: [{
-    types: ["changed"],
+    types: ["prolog"],
     style: {
-      color: "rgb(162, 191, 252)",
-      fontStyle: "italic"
-    }
-  }, {
-    types: ["deleted"],
-    style: {
-      color: "rgba(239, 83, 80, 0.56)",
-      fontStyle: "italic"
-    }
-  }, {
-    types: ["inserted", "attr-name"],
-    style: {
-      color: "rgb(72, 118, 214)",
-      fontStyle: "italic"
+      color: "rgb(0, 0, 128)"
     }
   }, {
     types: ["comment"],
     style: {
-      color: "rgb(152, 159, 177)",
-      fontStyle: "italic"
+      color: "rgb(106, 153, 85)"
     }
   }, {
-    types: ["string", "builtin", "char", "constant", "url"],
+    types: ["builtin", "changed", "keyword"],
     style: {
-      color: "rgb(72, 118, 214)"
+      color: "rgb(86, 156, 214)"
     }
   }, {
-    types: ["variable"],
+    types: ["number", "inserted"],
     style: {
-      color: "rgb(201, 103, 101)"
+      color: "rgb(181, 206, 168)"
     }
   }, {
-    types: ["number"],
+    types: ["constant"],
     style: {
-      color: "rgb(170, 9, 130)"
+      color: "rgb(100, 102, 149)"
     }
   }, {
-    // This was manually added after the auto-generation
-    // so that punctuations are not italicised
+    types: ["attr-name", "variable"],
+    style: {
+      color: "rgb(156, 220, 254)"
+    }
+  }, {
+    types: ["deleted", "string", "attr-value"],
+    style: {
+      color: "rgb(206, 145, 120)"
+    }
+  }, {
+    types: ["selector"],
+    style: {
+      color: "rgb(215, 186, 125)"
+    }
+  }, {
+    // Fix tag color
+    types: ["tag"],
+    style: {
+      color: "rgb(78, 201, 176)"
+    }
+  }, {
+    // Fix tag color for HTML
+    types: ["tag"],
+    languages: ["markup"],
+    style: {
+      color: "rgb(86, 156, 214)"
+    }
+  }, {
+    types: ["punctuation", "operator"],
+    style: {
+      color: "rgb(212, 212, 212)"
+    }
+  }, {
+    // Fix punctuation color for HTML
     types: ["punctuation"],
+    languages: ["markup"],
     style: {
-      color: "rgb(153, 76, 195)"
+      color: "#808080"
     }
   }, {
-    types: ["function", "selector", "doctype"],
+    types: ["function"],
     style: {
-      color: "rgb(153, 76, 195)",
-      fontStyle: "italic"
+      color: "rgb(220, 220, 170)"
     }
   }, {
     types: ["class-name"],
     style: {
-      color: "rgb(17, 17, 17)"
+      color: "rgb(78, 201, 176)"
     }
   }, {
-    types: ["tag"],
+    types: ["char"],
     style: {
-      color: "rgb(153, 76, 195)"
-    }
-  }, {
-    types: ["operator", "property", "keyword", "namespace"],
-    style: {
-      color: "rgb(12, 150, 155)"
-    }
-  }, {
-    types: ["boolean"],
-    style: {
-      color: "rgb(188, 84, 84)"
+      color: "rgb(209, 105, 105)"
     }
   }]
 };
@@ -50998,20 +50968,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "liveErrorStyle", function() { return liveErrorStyle; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CodeBlock", function() { return CodeBlock; });
 /* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "../../node_modules/@babel/runtime/helpers/esm/defineProperty.js");
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "../../node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "../../node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "../../node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var prism_react_renderer_themes_nightOwlLight__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prism-react-renderer/themes/nightOwlLight */ "../../node_modules/prism-react-renderer/themes/nightOwlLight/index.js");
-/* harmony import */ var prism_react_renderer_themes_nightOwl__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prism-react-renderer/themes/nightOwl */ "../../node_modules/prism-react-renderer/themes/nightOwl/index.js");
-/* harmony import */ var react_live__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-live */ "../../node_modules/react-live/dist/react-live.es.js");
-/* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mdx-js/react */ "../../node_modules/@mdx-js/react/dist/esm.js");
-/* harmony import */ var theme_ui__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! theme-ui */ "../../node_modules/theme-ui/dist/index.esm.js");
-/* harmony import */ var theme_ui_expansion_pack__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! theme-ui-expansion-pack */ "../theme-ui-expansion-pack/dist/index.js");
-/* harmony import */ var theme_ui_expansion_pack__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(theme_ui_expansion_pack__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var react_icons_md__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-icons/md */ "../../node_modules/react-icons/md/index.esm.js");
-/* harmony import */ var react_lorem_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-lorem-component */ "../../node_modules/react-lorem-component/index.js");
-/* harmony import */ var react_lorem_component__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_lorem_component__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/slicedToArray */ "../../node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "../../node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "../../node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "../../node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var prism_react_renderer_themes_github__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prism-react-renderer/themes/github */ "../../node_modules/prism-react-renderer/themes/github/index.js");
+/* harmony import */ var prism_react_renderer_themes_vsDark__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! prism-react-renderer/themes/vsDark */ "../../node_modules/prism-react-renderer/themes/vsDark/index.js");
+/* harmony import */ var react_live__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-live */ "../../node_modules/react-live/dist/react-live.es.js");
+/* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mdx-js/react */ "../../node_modules/@mdx-js/react/dist/esm.js");
+/* harmony import */ var theme_ui__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! theme-ui */ "../../node_modules/theme-ui/dist/index.esm.js");
+/* harmony import */ var theme_ui_expansion_pack__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! theme-ui-expansion-pack */ "../theme-ui-expansion-pack/dist/index.js");
+/* harmony import */ var theme_ui_expansion_pack__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(theme_ui_expansion_pack__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var react_icons_md__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-icons/md */ "../../node_modules/react-icons/md/index.esm.js");
+/* harmony import */ var react_lorem_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-lorem-component */ "../../node_modules/react-lorem-component/index.js");
+/* harmony import */ var react_lorem_component__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(react_lorem_component__WEBPACK_IMPORTED_MODULE_12__);
+
 
 
 
@@ -51019,7 +50991,7 @@ __webpack_require__.r(__webpack_exports__);
 var _this = undefined,
     _jsxFileName = "/Users/ivicabatinic/Documents/projects/DEV_PLAYGROUND/theme-ui-expansion-pack/packages/docs/src/components/CodeBlock.tsx";
 
-var __jsx = react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement;
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
@@ -51035,17 +51007,17 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 
 
-var Button = theme_ui__WEBPACK_IMPORTED_MODULE_8__["Button"],
-    restThemeUi = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2__["default"])(theme_ui__WEBPACK_IMPORTED_MODULE_8__, ["Button"]);
+var Button = theme_ui__WEBPACK_IMPORTED_MODULE_9__["Button"],
+    restThemeUi = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_3__["default"])(theme_ui__WEBPACK_IMPORTED_MODULE_9__, ["Button"]);
 
 var Box = restThemeUi.Box;
 var liveEditorStyle = {
-  fontSize: '14',
-  marginBottom: '32',
-  marginTop: '32',
+  fontSize: '14px',
+  marginBottom: '32px',
+  marginTop: '32px',
   overflowX: 'auto',
-  fontFamily: 'Menlo,monospace',
-  borderRadius: '10'
+  fontFamily: 'Menlo, monospace',
+  borderRadius: '10px'
 };
 var liveErrorStyle = {
   fontFamily: 'Menlo, monospace',
@@ -51062,8 +51034,8 @@ var images = {
 };
 
 var LiveCodePreview = function LiveCodePreview(props) {
-  return __jsx(Box, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
-    as: react_live__WEBPACK_IMPORTED_MODULE_6__["LivePreview"],
+  return __jsx(Box, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_2__["default"])({
+    as: react_live__WEBPACK_IMPORTED_MODULE_7__["LivePreview"],
     sx: {
       fontFamily: 'body',
       mb: 3
@@ -51079,7 +51051,7 @@ var LiveCodePreview = function LiveCodePreview(props) {
 };
 
 var CopyButton = function CopyButton(props) {
-  return __jsx(Button, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
+  return __jsx(Button, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_2__["default"])({
     size: "sm",
     position: "absolute",
     textTransform: "uppercase",
@@ -51100,7 +51072,7 @@ var CopyButton = function CopyButton(props) {
 };
 
 var StarIcon = function StarIcon(props) {
-  return __jsx(Box, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
+  return __jsx(Box, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_2__["default"])({
     m: "2px",
     as: "svg",
     fill: "current",
@@ -51130,19 +51102,24 @@ var CodeBlock = function CodeBlock(_ref) {
       isManual = _ref.isManual,
       render = _ref.render,
       children = _ref.children,
-      props = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2__["default"])(_ref, ["className", "live", "isManual", "render", "children"]);
+      props = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_3__["default"])(_ref, ["className", "live", "isManual", "render", "children"]);
 
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(children.trim()),
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])(children.trim()),
       editorCode = _useState[0],
       setEditorCode = _useState[1];
+
+  var _ThemeUi$useColorMode = theme_ui__WEBPACK_IMPORTED_MODULE_9__["useColorMode"](),
+      _ThemeUi$useColorMode2 = Object(_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_ThemeUi$useColorMode, 2),
+      mode = _ThemeUi$useColorMode2[0],
+      _ = _ThemeUi$useColorMode2[1];
 
   var language = className && className.replace(/language-/, ''); // const { onCopy, hasCopied } = useClipboard(editorCode);
 
   var themes = {
-    light: prism_react_renderer_themes_nightOwlLight__WEBPACK_IMPORTED_MODULE_4__["default"],
-    dark: prism_react_renderer_themes_nightOwl__WEBPACK_IMPORTED_MODULE_5__["default"]
+    "default": prism_react_renderer_themes_github__WEBPACK_IMPORTED_MODULE_5__["default"],
+    dark: prism_react_renderer_themes_vsDark__WEBPACK_IMPORTED_MODULE_6__["default"]
   };
-  var theme = themes['dark'];
+  var theme = themes[mode];
 
   var liveProviderProps = _objectSpread({
     theme: theme,
@@ -51151,9 +51128,9 @@ var CodeBlock = function CodeBlock(_ref) {
     transformCode: function transformCode(code) {
       return "/** @jsx jsx */\n<>".concat(code, "</>");
     },
-    scope: _objectSpread({}, theme_ui__WEBPACK_IMPORTED_MODULE_8__, {}, theme_ui_expansion_pack__WEBPACK_IMPORTED_MODULE_9__, {}, react_icons_md__WEBPACK_IMPORTED_MODULE_10__, {
-      Lorem: react_lorem_component__WEBPACK_IMPORTED_MODULE_11___default.a,
-      mdx: _mdx_js_react__WEBPACK_IMPORTED_MODULE_7__["mdx"],
+    scope: _objectSpread({}, theme_ui__WEBPACK_IMPORTED_MODULE_9__, {}, theme_ui_expansion_pack__WEBPACK_IMPORTED_MODULE_10__, {}, react_icons_md__WEBPACK_IMPORTED_MODULE_11__, {
+      Lorem: react_lorem_component__WEBPACK_IMPORTED_MODULE_12___default.a,
+      mdx: _mdx_js_react__WEBPACK_IMPORTED_MODULE_8__["mdx"],
       StarIcon: StarIcon,
       images: images
     }),
@@ -51165,18 +51142,18 @@ var CodeBlock = function CodeBlock(_ref) {
   };
 
   if (language.startsWith('js') && Boolean(live)) {
-    return __jsx(react_live__WEBPACK_IMPORTED_MODULE_6__["LiveProvider"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, liveProviderProps, {
+    return __jsx(react_live__WEBPACK_IMPORTED_MODULE_7__["LiveProvider"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_2__["default"])({}, liveProviderProps, {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 88,
+        lineNumber: 89,
         columnNumber: 7
       }
     }), __jsx(LiveCodePreview, {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 89,
+        lineNumber: 90,
         columnNumber: 9
       }
     }), __jsx(Box, {
@@ -51186,10 +51163,10 @@ var CodeBlock = function CodeBlock(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 90,
+        lineNumber: 91,
         columnNumber: 9
       }
-    }, __jsx(react_live__WEBPACK_IMPORTED_MODULE_6__["LiveEditor"], {
+    }, __jsx(react_live__WEBPACK_IMPORTED_MODULE_7__["LiveEditor"], {
       onChange: handleCodeChange,
       p: 20 // @ts-ignore
       ,
@@ -51197,17 +51174,17 @@ var CodeBlock = function CodeBlock(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 91,
+        lineNumber: 92,
         columnNumber: 11
       }
     })), __jsx(Box, {
-      as: react_live__WEBPACK_IMPORTED_MODULE_6__["LiveError"] // @ts-ignore
+      as: react_live__WEBPACK_IMPORTED_MODULE_7__["LiveError"] // @ts-ignore
       ,
       sx: liveErrorStyle,
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 99,
+        lineNumber: 100,
         columnNumber: 9
       }
     }));
@@ -51221,44 +51198,44 @@ var CodeBlock = function CodeBlock(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 110,
+        lineNumber: 111,
         columnNumber: 7
       }
-    }, __jsx(react_live__WEBPACK_IMPORTED_MODULE_6__["LiveProvider"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, liveProviderProps, {
+    }, __jsx(react_live__WEBPACK_IMPORTED_MODULE_7__["LiveProvider"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_2__["default"])({}, liveProviderProps, {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 111,
+        lineNumber: 112,
         columnNumber: 9
       }
     }), __jsx(LiveCodePreview, {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 112,
+        lineNumber: 113,
         columnNumber: 11
       }
     })));
   }
 
-  return __jsx(react_live__WEBPACK_IMPORTED_MODULE_6__["LiveProvider"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
+  return __jsx(react_live__WEBPACK_IMPORTED_MODULE_7__["LiveProvider"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_2__["default"])({
     disabled: true
   }, liveProviderProps, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 119,
+      lineNumber: 120,
       columnNumber: 5
     }
   }), __jsx(Box, {
-    as: react_live__WEBPACK_IMPORTED_MODULE_6__["LiveEditor"],
+    as: react_live__WEBPACK_IMPORTED_MODULE_7__["LiveEditor"],
     p: 20 // @ts-ignore
     ,
     sx: liveEditorStyle,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 120,
+      lineNumber: 121,
       columnNumber: 7
     }
   }));
@@ -51887,7 +51864,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var theme_ui__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! theme-ui */ "../../node_modules/theme-ui/dist/index.esm.js");
 
-var _jsxFileName = "/Users/ivicabatinic/Documents/projects/DEV_PLAYGROUND/theme-ui-expansion-pack/packages/docs/src/components/SidebarNavHeading.tsx";
+
+var _this = undefined,
+    _jsxFileName = "/Users/ivicabatinic/Documents/projects/DEV_PLAYGROUND/theme-ui-expansion-pack/packages/docs/src/components/SidebarNavHeading.tsx";
+
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
@@ -51895,14 +51875,22 @@ var SidebarNavHeading = function SidebarNavHeading(props) {
   return __jsx(theme_ui__WEBPACK_IMPORTED_MODULE_2__["Heading"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     sx: {
       color: 'gray',
-      fontSize: 2
+      fontSize: 0,
+      textTransform: 'uppercase',
+      mt: 4,
+      mb: 1,
+      px: 2,
+      ':first-of-type': {
+        mt: 0
+      }
     }
   }, props, {
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
-    },
-    __self: this
+      lineNumber: 8,
+      columnNumber: 5
+    }
   }));
 };
 
@@ -51929,9 +51917,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var lodash_isString__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! lodash/isString */ "../../node_modules/lodash/isString.js");
 /* harmony import */ var lodash_isString__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(lodash_isString__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/router */ "../../node_modules/next/dist/client/router.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_7__);
 
 
-var _jsxFileName = "/Users/ivicabatinic/Documents/projects/DEV_PLAYGROUND/theme-ui-expansion-pack/packages/docs/src/components/SidebarNavLink.tsx";
+
+var _this = undefined,
+    _jsxFileName = "/Users/ivicabatinic/Documents/projects/DEV_PLAYGROUND/theme-ui-expansion-pack/packages/docs/src/components/SidebarNavLink.tsx";
+
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
@@ -51943,11 +51936,47 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
 
-var SidebarNavLink = function SidebarNavLink(_ref) {
+
+
+var ActiveNavLink = function ActiveNavLink(_ref) {
   var href = _ref.href,
       children = _ref.children,
-      className = _ref.className,
-      props = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, ["href", "children", "className"]);
+      rest = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, ["href", "children"]);
+
+  var router = Object(next_router__WEBPACK_IMPORTED_MODULE_7__["useRouter"])();
+  console.log(href, router.asPath);
+  return router.asPath.startsWith(href) ? Object(theme_ui__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
+    sx: {
+      p: 2,
+      fontSize: 1,
+      fontWeight: 'bold',
+      color: 'textInverted',
+      bg: 'primary',
+      borderRadius: 4
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17,
+      columnNumber: 5
+    }
+  }, children) : Object(theme_ui__WEBPACK_IMPORTED_MODULE_3__["jsx"])(theme_ui__WEBPACK_IMPORTED_MODULE_3__["NavLink"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    href: href
+  }, rest, {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21,
+      columnNumber: 5
+    }
+  }), children);
+};
+
+var SidebarNavLink = function SidebarNavLink(_ref2) {
+  var href = _ref2.href,
+      children = _ref2.children,
+      className = _ref2.className,
+      props = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref2, ["href", "children", "className"]);
 
   var isExternal = lodash_isString__WEBPACK_IMPORTED_MODULE_6___default()(href) && is_absolute_url__WEBPACK_IMPORTED_MODULE_4___default()(href || '');
 
@@ -51955,11 +51984,12 @@ var SidebarNavLink = function SidebarNavLink(_ref) {
     return Object(theme_ui__WEBPACK_IMPORTED_MODULE_3__["jsx"])(theme_ui__WEBPACK_IMPORTED_MODULE_3__["NavLink"], {
       href: href,
       className: className,
+      __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 15
-      },
-      __self: this
+        lineNumber: 32,
+        columnNumber: 7
+      }
     }, children);
   }
 
@@ -51968,17 +51998,19 @@ var SidebarNavLink = function SidebarNavLink(_ref) {
     as: "".concat("").concat(href)
   }, props, {
     passHref: true,
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: this
-  }), Object(theme_ui__WEBPACK_IMPORTED_MODULE_3__["jsx"])(theme_ui__WEBPACK_IMPORTED_MODULE_3__["NavLink"], {
+      lineNumber: 39,
+      columnNumber: 5
+    }
+  }), Object(theme_ui__WEBPACK_IMPORTED_MODULE_3__["jsx"])(ActiveNavLink, {
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
-    },
-    __self: this
+      lineNumber: 40,
+      columnNumber: 7
+    }
   }, children));
 };
 
@@ -53055,13 +53087,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   colors: {
     text: '#353535',
+    textInverted: '#ffffff',
     background: '#ffffff',
     primary: '#D8262C',
     secondary: '#BD0101',
     muted: '#f6f6f6',
     highlight: '#f6f6f6',
-    gray: '#757575',
-    neutral: '#757575',
+    gray: '#b0b0b0',
+    neutral: '#b0b0b0',
     neutrals: {
       10: '#121212',
       20: '#1a1a1a',
@@ -53071,18 +53104,19 @@ __webpack_require__.r(__webpack_exports__);
     modes: {
       dark: {
         text: '#ffffff',
+        textInverted: '#121212',
         background: '#121212',
         primary: '#D8262C',
         secondary: '#BD0101',
         muted: '#191919',
         highlight: '#292929',
-        gray: '#1a1a1a',
-        neutral: '#1a1a1a',
+        gray: '#b0b0b0',
+        neutral: '#b0b0b0',
         neutrals: {
-          10: '#121212',
-          20: '#1a1a1a',
-          30: '#292929',
-          40: '#333333'
+          10: '#333333',
+          20: '#292929',
+          30: '#1a1a1a',
+          40: '#121212'
         }
       }
     }
