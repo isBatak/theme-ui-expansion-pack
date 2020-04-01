@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import { Box, BoxProps } from '@theme-ui/components';
+import { Box, BoxProps } from 'theme-ui';
 
 export const Dummy = forwardRef<HTMLDivElement, BoxProps>(({ sx, ...rest }, ref) => (
   <Box

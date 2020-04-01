@@ -10,6 +10,12 @@ export default {
     highlight: '#f6f6f6',
     gray: '#757575',
     neutral: '#757575',
+    neutrals: {
+      10: '#121212',
+      20: '#1a1a1a',
+      30: '#292929',
+      40: '#333333',
+    },
     modes: {
       dark: {
         text: '#ffffff',
@@ -20,6 +26,12 @@ export default {
         highlight: '#292929',
         gray: '#1a1a1a',
         neutral: '#1a1a1a',
+        neutrals: {
+          10: '#121212',
+          20: '#1a1a1a',
+          30: '#292929',
+          40: '#333333',
+        },
       },
     },
   },
