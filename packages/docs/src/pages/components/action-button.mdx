@@ -14,7 +14,7 @@ import { ActionButton } from 'theme-ui-expansion-pack';
 
 ## Usage
 
-```jsx
+```jsx live=true
 <ActionButton>Button</ActionButton>
 ```
 
@@ -22,7 +22,7 @@ import { ActionButton } from 'theme-ui-expansion-pack';
 
 Use the `variant` prop to change the visual style of the Button.
 
-```jsx
+```jsx live=true
 <ButtonGroup spacing={4}>
   <ActionButton variant="primary">Button</ActionButton>
   <ActionButton variant="secondary">Button</ActionButton>
@@ -34,8 +34,7 @@ Use the `variant` prop to change the visual style of the Button.
 You can add left and right icons to the Button components from popular libraries like
 [react-icons](https://react-icons.netlify.com) and just pass it into the button.
 
-```jsx
-// -> import {MdBuild , MdCall} from "react-icons/md"
+```jsx live=true
 <ButtonGroup spacing={4}>
   <ActionButton leftIcon={MdBuild}>Email</ActionButton>
   <ActionButton rightIcon={MdCall}>Call us</ActionButton>
@@ -46,7 +45,7 @@ You can add left and right icons to the Button components from popular libraries
 
 Pass `isLoading` prop to the Button component to show it's loading state.
 
-```jsx
+```jsx live=true
 <ButtonGroup spacing={4}>
   <ActionButton isLoading>Email</ActionButton>
   <ActionButton isLoading>Submit</ActionButton>

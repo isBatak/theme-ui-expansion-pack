@@ -29,6 +29,14 @@ export const liveErrorStyle = {
   backgroundColor: 'red',
 };
 
+const images = {
+  nyc:
+    'https://images.unsplash.com/photo-1446776899648-aa78eefe8ed0?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9',
+  flatiron:
+    'https://images.unsplash.com/photo-1520222984843-df35ebc0f24d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9',
+  logo: 'https://contrast.now.sh/fff/000?text=UI&size=96&fontSize=1.5&baseline=1',
+};
+
 const LiveCodePreview = (props) => <Box as={LivePreview} sx={{ fontFamily: 'body', mb: 3 }} {...props} />;
 
 const CopyButton = (props) => (
@@ -54,7 +62,7 @@ const StarIcon = (props) => {
   );
 };
 
-export const CodeBlock = ({ className, live = true, isManual, render, children, ...props }) => {
+export const CodeBlock = ({ className, live, isManual, render, children, ...props }) => {
   const [editorCode, setEditorCode] = useState(children.trim());
 
   const language = className && className.replace(/language-/, '');
@@ -67,15 +75,15 @@ export const CodeBlock = ({ className, live = true, isManual, render, children, 
     theme,
     language,
     code: editorCode,
-    transformCode: (code) => '/** @jsx mdx */' + code,
-    scope: { ...ThemeUi, ...ThemeUiExpansionPack, ...ReactIcons, Lorem, mdx, StarIcon },
+    transformCode: (code) => `/** @jsx jsx */\n<>${code}</>`,
+    scope: { ...ThemeUi, ...ThemeUiExpansionPack, ...ReactIcons, Lorem, mdx, StarIcon, images },
     noInline: isManual,
     ...props,
   };
 
   const handleCodeChange = (newCode) => setEditorCode(newCode.trim());
 
-  if (language === 'jsx' && live === true) {
+  if (language.startsWith('js') && Boolean(live)) {
     return (
       <LiveProvider {...liveProviderProps}>
         <LiveCodePreview />
