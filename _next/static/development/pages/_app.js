@@ -51651,7 +51651,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/head */ "../../node_modules/next/dist/next-server/lib/head.js");
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var theme_ui__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! theme-ui */ "../../node_modules/theme-ui/dist/index.esm.js");
-var _jsxFileName = "/Users/ivicabatinic/Documents/projects/DEV_PLAYGROUND/theme-ui-expansion-pack/packages/docs/src/components/Meta.tsx";
+var _this = undefined,
+    _jsxFileName = "/Users/ivicabatinic/Documents/projects/DEV_PLAYGROUND/theme-ui-expansion-pack/packages/docs/src/components/Meta.tsx";
+
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -51660,90 +51662,100 @@ var Meta = function Meta() {
   var _useThemeUI = Object(theme_ui__WEBPACK_IMPORTED_MODULE_2__["useThemeUI"])(),
       theme = _useThemeUI.theme;
 
+  var urlPrefix = false ? undefined : '';
   return __jsx(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
-    },
-    __self: this
+      lineNumber: 11,
+      columnNumber: 5
+    }
   }, __jsx("link", {
     rel: "apple-touch-icon",
     sizes: "180x180",
-    href: "/theme-ui-expansion-pack/favicon/apple-touch-icon.png",
+    href: "".concat(urlPrefix, "/favicon/apple-touch-icon.png"),
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
-    },
-    __self: this
+      lineNumber: 12,
+      columnNumber: 7
+    }
   }), __jsx("link", {
     rel: "icon",
     type: "image/png",
     sizes: "32x32",
-    href: "/theme-ui-expansion-pack/favicon/favicon-32x32.png",
+    href: "".concat(urlPrefix, "/favicon/favicon-32x32.png"),
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: this
+      lineNumber: 13,
+      columnNumber: 7
+    }
   }), __jsx("link", {
     rel: "icon",
     type: "image/png",
     sizes: "16x16",
-    href: "/theme-ui-expansion-pack/favicon/favicon-16x16.png",
+    href: "".concat(urlPrefix, "/favicon/favicon-16x16.png"),
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: this
+      lineNumber: 14,
+      columnNumber: 7
+    }
   }), __jsx("link", {
     rel: "manifest",
-    href: "/theme-ui-expansion-pack/favicon/site.webmanifest",
+    href: "".concat(urlPrefix, "/manifest.json"),
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: this
+      lineNumber: 15,
+      columnNumber: 7
+    }
   }), __jsx("link", {
     rel: "mask-icon",
-    href: "/theme-ui-expansion-pack/favicon/safari-pinned-tab.svg",
-    color: "#000000",
+    href: "".concat(urlPrefix, "/favicon/safari-pinned-tab.svg\" color=\"#000000"),
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: this
+      lineNumber: 16,
+      columnNumber: 7
+    }
   }), __jsx("link", {
     rel: "shortcut icon",
-    href: "/theme-ui-expansion-pack/favicon/favicon.ico",
+    href: "".concat(urlPrefix, "/favicon/favicon.ico"),
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: this
+      lineNumber: 17,
+      columnNumber: 7
+    }
   }), __jsx("meta", {
     name: "msapplication-TileColor",
     content: theme.colors.background,
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: this
+      lineNumber: 18,
+      columnNumber: 7
+    }
   }), __jsx("meta", {
     name: "msapplication-config",
-    content: "/theme-ui-expansion-pack/favicon/browserconfig.xml",
+    content: "".concat(urlPrefix, "/favicon/browserconfig.xml"),
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
-    },
-    __self: this
+      lineNumber: 19,
+      columnNumber: 7
+    }
   }), __jsx("meta", {
     name: "theme-color",
     content: theme.colors.background,
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
+      lineNumber: 20,
+      columnNumber: 7
+    }
   }));
 };
 
