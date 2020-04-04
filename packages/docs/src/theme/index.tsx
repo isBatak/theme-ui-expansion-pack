@@ -1,5 +1,3 @@
-// import prism from '@theme-ui/prism/presets/theme-ui';
-
 export default {
   colors: {
     text: '#353535',
