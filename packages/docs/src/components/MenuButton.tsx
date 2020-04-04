@@ -17,7 +17,7 @@ const Burger = ({ size = '1em' }) => (
   </svg>
 );
 
-export default (props) => (
+export const MenuButton = (props) => (
   <button
     title="Toggle Menu"
     {...props}
