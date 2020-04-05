@@ -1,7 +1,9 @@
 /** @jsx jsx */
-import { jsx, Styled, useColorMode, Flex, Box, NavLink, Input } from 'theme-ui';
+import { jsx, useColorMode, Flex, Box, NavLink, Input, useThemeUI, css as cssTUI } from 'theme-ui';
 import { FC, useState, useRef } from 'react';
 import NextLink from 'next/link';
+import Headroom from 'react-headroom';
+import { Global, css } from '@emotion/core';
 
 import { MenuButton } from './MenuButton';
 import { SidebarNavLink } from './SidebarNavLink';
@@ -42,64 +44,82 @@ interface ILayoutProps {
 
 export const Layout: FC<ILayoutProps> = (props) => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const nav = useRef(null);
   const [mode, setMode] = useColorMode();
+  const context = useThemeUI();
+  const { theme } = context;
 
-  const cycleMode = (e) => {
+  const cycleMode = () => {
     const i = modes.indexOf(mode);
     const next = modes[(i + 1) % modes.length];
     setMode(next);
   };
 
+  const onHamburgerClick = () => {
+    setMenuOpen((state) => !state);
+  };
+
   return (
-    <Styled.root>
+    <>
       <Head {...props} />
-      <Flex
+      <Global
+        styles={css(
+          cssTUI({
+            body: {
+              pl: [null, null, '300px'],
+            },
+          })(theme) as {},
+        )}
+      />
+      <Box
         sx={{
-          flexDirection: 'row',
-          minHeight: '100vh',
+          display: 'flex',
+          flexDirection: 'column',
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: 299,
+          height: '100vh',
+          borderRightWidth: '1px',
+          borderRightStyle: 'solid',
+          borderRightColor: 'border',
+          bg: 'background',
+          transition: 'transform 0.2s ease-in-out',
+          transform: [null, null, 'translateX(0) !important'],
+          zIndex: 1000,
+        }}
+        style={{
+          transform: menuOpen ? 'translateX(0)' : 'translateX(-100%)',
         }}
       >
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            position: 'sticky',
-            top: 0,
-            width: 299,
-            height: '100vh',
-            borderRightWidth: '1px',
-            borderRightStyle: 'solid',
-            borderRightColor: 'border',
-          }}
-        >
-          <Box sx={{ p: '30px', borderBottomWidth: '1px', borderBottomStyle: 'solid', borderBottomColor: 'border' }}>
-            <NextLink href="/" passHref>
-              <NavLink>Theme UI Expansion Pack</NavLink>
-            </NextLink>
-          </Box>
-          <Box sx={{ p: '30px', borderBottomWidth: '1px', borderBottomStyle: 'solid', borderBottomColor: 'border' }}>
-            <Input placeholder="Search" />
-          </Box>
-          <Box sx={{ overflow: 'auto', flex: 1 }}>
-            <Sidebar
-              components={sidebar}
-              sx={{
-                px: 3,
-                pt: 3,
-                pb: 4,
-              }}
-            />
-          </Box>
+        <Box sx={{ p: '30px', borderBottomWidth: '1px', borderBottomStyle: 'solid', borderBottomColor: 'border' }}>
+          <NextLink href="/" passHref>
+            <NavLink>Theme UI Expansion Pack</NavLink>
+          </NextLink>
         </Box>
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            flex: '1 1 auto',
-            minHeight: '100vh',
-          }}
-        >
+        {/* <Box sx={{ p: '30px', borderBottomWidth: '1px', borderBottomStyle: 'solid', borderBottomColor: 'border' }}>
+          <Input placeholder="Search" />
+        </Box> */}
+        <Box sx={{ overflow: 'auto', flex: 1 }}>
+          <Sidebar
+            components={sidebar}
+            sx={{
+              px: 3,
+              pt: 3,
+              pb: 4,
+            }}
+          />
+        </Box>
+      </Box>
+
+      <Flex
+        sx={{
+          flexDirection: 'column',
+          flex: '1 1 auto',
+          minHeight: '100vh',
+          zIndex: 500,
+        }}
+      >
+        <Headroom>
           <Flex
             as="header"
             sx={{
@@ -107,17 +127,11 @@ export const Layout: FC<ILayoutProps> = (props) => {
               px: 3,
               alignItems: 'center',
               justifyContent: 'space-between',
+              bg: 'background',
             }}
           >
             <Flex sx={{ alignItems: 'center' }}>
-              <MenuButton
-                onClick={() => {
-                  setMenuOpen((state) => !state);
-                  if (!nav.current) return;
-                  const navLink = nav.current.querySelector('a');
-                  if (navLink) navLink.focus();
-                }}
-              />
+              <MenuButton onClick={onHamburgerClick} />
               <NextLink href="/" passHref>
                 <NavLink>Theme UI Expansion Pack</NavLink>
               </NextLink>
@@ -134,23 +148,23 @@ export const Layout: FC<ILayoutProps> = (props) => {
               </Button>
             </Flex>
           </Flex>
-          <main
-            id="content"
-            sx={{
-              width: '100%',
-              minWidth: 0,
-              maxWidth: 768,
-              mx: 'auto',
-              pb: 5,
-              px: 3,
-              flex: 1,
-            }}
-          >
-            {props.children}
-          </main>
-          <Footer />
-        </Box>
+        </Headroom>
+        <main
+          id="content"
+          sx={{
+            width: '100%',
+            minWidth: 0,
+            maxWidth: 768,
+            mx: 'auto',
+            pb: 5,
+            px: 3,
+            flex: 1,
+          }}
+        >
+          {props.children}
+        </main>
+        <Footer />
       </Flex>
-    </Styled.root>
+    </>
   );
 };
