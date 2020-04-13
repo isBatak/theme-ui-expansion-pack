@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, useColorMode, Flex, Box, NavLink, Input, useThemeUI, css as cssTUI } from 'theme-ui';
+import { jsx, useColorMode, Flex, Box, NavLink, Text, Input, useThemeUI, css as cssTUI } from 'theme-ui';
 import { FC, useState, useRef } from 'react';
 import NextLink from 'next/link';
 import Headroom from 'react-headroom';
@@ -13,6 +13,7 @@ import { SideNav } from './SideNav';
 import { SidebarNavHeading } from './SidebarNavHeading';
 import { Head } from './Head';
 import { Footer } from './Footer';
+import { Logo } from './svgs/Logo';
 
 const modes = ['default', 'dark'];
 
@@ -93,7 +94,23 @@ export const Layout: FC<ILayoutProps> = (props) => {
       >
         <Box sx={{ p: '30px', borderBottomWidth: '1px', borderBottomStyle: 'solid', borderBottomColor: 'border' }}>
           <NextLink href="/" passHref>
-            <NavLink>Theme UI Expansion Pack</NavLink>
+            <a
+              sx={{
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center',
+                textDecoration: 'none',
+                color: 'text',
+                fontWeight: 700,
+                lineHeight: 1.2,
+              }}
+            >
+              <Logo width={40} height={40} sx={{ mr: 2 }} />
+              <Box>
+                <Text>Theme UI</Text>
+                <Text>Expansion Pack</Text>
+              </Box>
+            </a>
           </NextLink>
         </Box>
         {/* <Box sx={{ p: '30px', borderBottomWidth: '1px', borderBottomStyle: 'solid', borderBottomColor: 'border' }}>

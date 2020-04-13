@@ -2,6 +2,7 @@ export default {
   colors: {
     text: '#353535',
     textInverted: '#ffffff',
+    textMuted: '#757575',
     background: '#ffffff',
     primary: '#D8262C',
     secondary: '#BD0101',

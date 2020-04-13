@@ -11,12 +11,13 @@ import { useRouter } from 'next/router';
 const ActiveNavLink: FC<{ href?: string }> = ({ href, children, ...rest }) => {
   const router = useRouter();
 
-  console.log(href, router.asPath);
-
   return router.asPath.startsWith(href) ? (
-    <div sx={{ p: 2, fontSize: 1, fontWeight: 'bold', color: 'textInverted', bg: 'primary', borderRadius: 4 }}>
+    <NavLink
+      as="div"
+      sx={{ p: 2, fontSize: 1, fontWeight: 'bold', color: 'textInverted', bg: 'primary', borderRadius: 4 }}
+    >
       {children}
-    </div>
+    </NavLink>
   ) : (
     <NavLink href={href} {...rest}>
       {children}
@@ -24,8 +25,10 @@ const ActiveNavLink: FC<{ href?: string }> = ({ href, children, ...rest }) => {
   );
 };
 
-export const SidebarNavLink: FC<LinkProps & { className: string }> = ({ href, children, className, ...props }) => {
+export const SidebarNavLink: FC<{ href: string; className: string }> = ({ href, children, className, ...props }) => {
+  const router = useRouter();
   const isExternal = isString(href) && isAbsoluteURL(href || '');
+  const isActive = router.asPath.startsWith(href as string);
 
   if (isExternal && isString(href)) {
     return (
@@ -37,7 +40,9 @@ export const SidebarNavLink: FC<LinkProps & { className: string }> = ({ href, ch
 
   return (
     <NextLink href={href} as={`${process.env.linkPrefix}${href}`} {...props} passHref>
-      <ActiveNavLink>{children}</ActiveNavLink>
+      <NavLink href={href} isActive={isActive}>
+        {children}
+      </NavLink>
     </NextLink>
   );
 };
