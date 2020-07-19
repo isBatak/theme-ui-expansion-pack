@@ -330,5 +330,21 @@ export default {
       },
     },
   },
+  accordion: {
+    accordionHeader: {
+      p: 2,
+      bg: 'transparent',
+      border: 'none',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      color: 'text',
+      width: '100%',
+      cursor: 'pointer',
+      '&:hover': {
+        bg: 'muted',
+      },
+    },
+  },
   // prism,
 };
