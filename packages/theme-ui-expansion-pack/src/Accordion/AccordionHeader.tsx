@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, BoxProps, Box } from 'theme-ui';
-import React, { forwardRef, useContext } from 'react';
+import { forwardRef, useContext } from 'react';
 
 import { AccordionItemContext } from './AccordionItem';
 
@@ -8,7 +8,7 @@ interface IAccordionHeader extends BoxProps {
   iconPath?: string;
 }
 
-export const AccordionHeader = forwardRef<undefined, IAccordionHeader>(
+export const AccordionHeader = forwardRef<HTMLDivElement, IAccordionHeader>(
   (
     {
       onClick,
@@ -24,6 +24,7 @@ export const AccordionHeader = forwardRef<undefined, IAccordionHeader>(
       <Box
         ref={ref}
         as="button"
+        // @ts-ignore
         type="button"
         id={headerId}
         disabled={isDisabled}
@@ -39,7 +40,7 @@ export const AccordionHeader = forwardRef<undefined, IAccordionHeader>(
         __themeKey="accordion"
         variant="accordionHeader"
         {...rest}
-        __css={{
+        css={{
           '&[aria-expanded="true"]': {
             '[data-accoridion="icon"]': {
               transform: 'rotate(-180deg)',

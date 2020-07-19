@@ -1,0 +1,64 @@
+import { SEO } from '../../components/SEO';
+
+<SEO title="Accordion" description="" />
+
+# Accordion
+
+Accordions display a list of high-level options that can expand/collapse to reveal more information.
+
+## Import
+
+Theme UI Expansion Pack exports 5 accordion related components.
+
+- `Accordion`: The wrapper that uses cloneElement to pass it's prop to the `AccordionItem`.
+- `AccordionItem`: A single accordion item.
+- `AccordionHeader`: The button that toggles the expand/collapse state of the accordion item.
+- `AccordionPanel`: The container for the details to be revealed.
+- `AccordionIcon`: A `chevron-down` icon that rotates based on the expanded/collapsed state
+
+<!-- prettier-ignore -->
+```js
+import {
+  Accordion,
+  AccordionItem,
+  AccordionHeader,
+  AccordionPanel,
+  AccordionIcon,
+} from 'theme-ui-expansion-pack';
+```
+
+## Usage
+
+By default, only one item may be expanded and it can only be collapsed again by expanding another.
+
+```jsx
+<Accordion>
+  <AccordionItem>
+    <AccordionHeader>
+      <Box flex="1" textAlign="left">
+        Section 1 title
+      </Box>
+      <AccordionIcon />
+    </AccordionHeader>
+    <AccordionPanel pb={4}>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat.
+    </AccordionPanel>
+  </AccordionItem>
+
+  <AccordionItem>
+    <AccordionHeader>
+      <Box flex="1" textAlign="left">
+        Section 2 title
+      </Box>
+      <AccordionIcon />
+    </AccordionHeader>
+    <AccordionPanel pb={4}>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat.
+    </AccordionPanel>
+  </AccordionItem>
+</Accordion>
+```

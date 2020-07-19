@@ -1,7 +1,7 @@
 import React, { forwardRef, Children, cloneElement, isValidElement, useState, useRef, ReactNode } from 'react';
 import { BoxProps, Box } from 'theme-ui';
 
-const getExpandCondition = (index, itemIndex) => {
+const getExpandCondition = (index: number | Array<number>, itemIndex: number) => {
   if (Array.isArray(index)) {
     return index.includes(itemIndex);
   }
@@ -35,20 +35,20 @@ interface IAccordionProps extends Omit<BoxProps, 'onChange'> {
   onChange?(expandedIndex?: number | Array<number>): void;
 }
 
-export const Accordion = forwardRef<undefined, IAccordionProps>(
+export const Accordion = forwardRef<HTMLDivElement, IAccordionProps>(
   ({ allowMultiple, allowToggle, index, defaultIndex, onChange, children, ...rest }, ref) => {
     const initializeState = () => {
       if (allowMultiple) {
         return defaultIndex || [];
       }
 
-      return defaultIndex || 0;
+      return defaultIndex || -1;
     };
 
-    const [expandedIndex, setExpandedIndex] = useState(initializeState);
+    const [expandedIndex, setExpandedIndex] = useState<number | Array<number>>(initializeState);
     const { current: isControlled } = useRef(index != null);
 
-    const internalIndex = isControlled ? index : expandedIndex;
+    const internalIndex = (isControlled ? index : expandedIndex) as number | Array<number>;
 
     return (
       <Box ref={ref} data-testid="accordion" {...rest}>
@@ -59,12 +59,12 @@ export const Accordion = forwardRef<undefined, IAccordionProps>(
 
           return cloneElement(child, {
             isOpen: getExpandCondition(internalIndex, childIndex),
-            onChange: (isExpanded) => {
+            onChange: (isExpanded: boolean) => {
               if (allowMultiple) {
                 let newIndices;
 
                 if (isExpanded) {
-                  newIndices = [...internalIndex, childIndex];
+                  newIndices = [...(internalIndex as Array<number>), childIndex];
                 } else {
                   newIndices = (internalIndex as Array<number>).filter((itemIndex) => itemIndex !== childIndex);
                 }
@@ -88,11 +88,11 @@ export const Accordion = forwardRef<undefined, IAccordionProps>(
                 } else {
                   if (allowToggle) {
                     if (!isControlled) {
-                      setExpandedIndex(null);
+                      setExpandedIndex(-1);
                     }
 
                     if (onChange) {
-                      onChange(null);
+                      onChange(-1);
                     }
                   }
                 }
