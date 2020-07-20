@@ -40,7 +40,15 @@ export const AccordionHeader = forwardRef<HTMLDivElement, IAccordionHeader>(
         __themeKey="accordion"
         variant="accordionHeader"
         {...rest}
-        css={{
+        // @ts-ignore
+        __css={{
+          background: 'none',
+          border: 'none',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          color: 'text',
+          width: '100%',
           '&[aria-expanded="true"]': {
             '[data-accoridion="icon"]': {
               transform: 'rotate(-180deg)',

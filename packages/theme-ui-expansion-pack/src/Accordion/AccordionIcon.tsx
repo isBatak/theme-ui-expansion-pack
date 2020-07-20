@@ -13,7 +13,8 @@ export const AccordionIcon = forwardRef<HTMLDivElement, BoxProps>((props, ref) =
       data-testid="accordion-icon"
       aria-hidden
       {...props}
-      css={{
+      // @ts-ignore
+      __css={{
         opacity: isDisabled ? 0.4 : 1,
         transform: isExpanded ? 'rotate(-180deg)' : undefined,
         transition: 'transform 0.2s',
