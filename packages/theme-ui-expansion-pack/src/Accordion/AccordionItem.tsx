@@ -48,7 +48,7 @@ interface IAccordionItemProps extends Omit<BoxProps, 'onChange'> {
 }
 
 export const AccordionItem = forwardRef<HTMLDivElement, IAccordionItemProps & AccordionItemChildren>(
-  ({ isOpen, defaultIsOpen, id, isDisabled, onChange, children, ...rest }, ref) => {
+  ({ isOpen = false, defaultIsOpen, id, isDisabled = false, onChange, children, ...rest }, ref) => {
     const [expanded, setExpanded] = useState(defaultIsOpen || false);
     const { current: isControlled } = useRef(isOpen != null);
     const isExpanded = isControlled ? isOpen : expanded;
