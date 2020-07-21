@@ -185,7 +185,7 @@ If you need access to the internal state of each accordion item, you can use a r
           <Box flex="1" textAlign="left">
             Section 2 title
           </Box>
-          <AccordionIcon />
+          {isExpanded ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
         </AccordionHeader>
         <AccordionPanel pb={4}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
