@@ -49,25 +49,9 @@ export const AccordionHeader = forwardRef<HTMLDivElement, IAccordionHeader>(
           justifyContent: 'space-between',
           color: 'text',
           width: '100%',
-          '&[aria-expanded="true"]': {
-            '[data-accoridion="icon"]': {
-              transform: 'rotate(-180deg)',
-            },
-          },
         }}
       >
         {children}
-        <svg
-          data-accoridion="icon"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          sx={{
-            variant: 'accordion.accordionHeader.icon',
-          }}
-        >
-          <path d={iconPath} />
-        </svg>
       </Box>
     );
   },
