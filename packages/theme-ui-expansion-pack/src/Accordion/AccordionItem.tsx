@@ -47,41 +47,42 @@ interface IAccordionItemProps extends Omit<BoxProps, 'onChange'> {
   onChange?(isOpen: boolean): void;
 }
 
-export const AccordionItem = forwardRef<HTMLDivElement, IAccordionItemProps & AccordionItemChildren>(
-  ({ isOpen = false, defaultIsOpen, id, isDisabled = false, onChange, children, ...rest }, ref) => {
-    const [expanded, setExpanded] = useState(defaultIsOpen || false);
-    const { current: isControlled } = useRef(isOpen != null);
-    const isExpanded = isControlled ? isOpen : expanded;
+export const AccordionItem = forwardRef<HTMLDivElement, IAccordionItemProps & AccordionItemChildren>(function(
+  { isOpen = false, defaultIsOpen, id, isDisabled = false, onChange, children, ...rest },
+  ref,
+) {
+  const [expanded, setExpanded] = useState(defaultIsOpen || false);
+  const { current: isControlled } = useRef(isOpen != null);
+  const isExpanded = isControlled ? isOpen : expanded;
 
-    const onToggle = () => {
-      if (onChange) {
-        onChange(!isExpanded);
-      }
-      if (!isControlled) {
-        setExpanded(!expanded);
-      }
-    };
+  const onToggle = () => {
+    if (onChange) {
+      onChange(!isExpanded);
+    }
+    if (!isControlled) {
+      setExpanded(!expanded);
+    }
+  };
 
-    const uuid = useId();
-    const uniqueId = id || uuid;
+  const uuid = useId();
+  const uniqueId = id || uuid;
 
-    const headerId = `accordion-header-${uniqueId}`;
-    const panelId = `accordion-panel-${uniqueId}`;
+  const headerId = `accordion-header-${uniqueId}`;
+  const panelId = `accordion-panel-${uniqueId}`;
 
-    return (
-      <AccordionItemContext.Provider
-        value={{
-          isExpanded,
-          isDisabled,
-          headerId,
-          panelId,
-          onToggle,
-        }}
-      >
-        <Box ref={ref} data-testid="accordion-item" {...rest}>
-          {typeof children === 'function' ? children({ isExpanded, isDisabled }) : children}
-        </Box>
-      </AccordionItemContext.Provider>
-    );
-  },
-);
+  return (
+    <AccordionItemContext.Provider
+      value={{
+        isExpanded,
+        isDisabled,
+        headerId,
+        panelId,
+        onToggle,
+      }}
+    >
+      <Box ref={ref} data-testid="accordion-item" {...rest}>
+        {typeof children === 'function' ? children({ isExpanded, isDisabled }) : children}
+      </Box>
+    </AccordionItemContext.Provider>
+  );
+});

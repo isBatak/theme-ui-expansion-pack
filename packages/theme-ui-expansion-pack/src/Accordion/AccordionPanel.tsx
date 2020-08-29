@@ -3,7 +3,7 @@ import { BoxProps, Box } from 'theme-ui';
 
 import { AccordionItemContext } from './AccordionItem';
 
-export const AccordionPanel = forwardRef<HTMLDivElement, BoxProps>((props, ref) => {
+export const AccordionPanel = forwardRef<HTMLDivElement, BoxProps>(function(props, ref) {
   const { isExpanded, panelId, headerId } = useContext(AccordionItemContext);
 
   return (

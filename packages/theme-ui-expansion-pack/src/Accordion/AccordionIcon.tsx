@@ -4,7 +4,7 @@ import { jsx, BoxProps, Box } from 'theme-ui';
 
 import { AccordionItemContext } from './AccordionItem';
 
-export const AccordionIcon = forwardRef<HTMLDivElement, BoxProps>((props, ref) => {
+export const AccordionIcon = forwardRef<HTMLDivElement, BoxProps>(function(props, ref) {
   const { isExpanded, isDisabled } = useContext(AccordionItemContext);
 
   return (
