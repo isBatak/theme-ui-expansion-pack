@@ -17,6 +17,8 @@ export const AccordionIcon = forwardRef<HTMLDivElement, BoxProps>(function(props
       {...props}
       // @ts-ignore
       __css={{
+        height: '24px',
+        width: '24px',
         fontSize: '1.25em',
         opacity: isDisabled ? 0.4 : 1,
         transform: isExpanded ? 'rotate(-180deg)' : undefined,
