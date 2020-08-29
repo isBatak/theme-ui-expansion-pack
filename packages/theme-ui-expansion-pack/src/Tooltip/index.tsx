@@ -2,7 +2,7 @@
 import { jsx } from 'theme-ui';
 import { FC } from 'react';
 import Tippy, { TippyProps } from '@tippy.js/react';
-import { BoxProps } from '@theme-ui/components';
+import { BoxProps } from 'theme-ui';
 
 type TooltipProps = Pick<BoxProps, 'sx'> & TippyProps;
 

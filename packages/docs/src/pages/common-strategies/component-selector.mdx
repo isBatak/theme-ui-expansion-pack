@@ -1,0 +1,15 @@
+# Component Selector
+
+To select child component with CSS use `data-component` data attribute.
+
+```jsx live=true
+<Box sx={{ ':hover > [data-component="Icon"]': { color: 'primary' } }}>
+  <MdBuild data-component="Icon" />
+</Box>
+```
+
+Inspired by:
+
+- [https://react-ui.dev/core-concepts/ideas#Component%20selectors](https://react-ui.dev/core-concepts/ideas#Component%20selectors)
+- [https://react-ui.dev/components/Element#component](https://react-ui.dev/components/Element#component)
+- [https://reacttraining.com/reach-ui/styling/#element-selectors](https://reacttraining.com/reach-ui/styling/#element-selectors)

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import lightTheme from 'prism-react-renderer/themes/nightOwlLight';
-import darkTheme from 'prism-react-renderer/themes/nightOwl';
+import lightTheme from 'prism-react-renderer/themes/github';
+import darkTheme from 'prism-react-renderer/themes/vsDark';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import { mdx } from '@mdx-js/react';
 import * as ThemeUi from 'theme-ui';
@@ -12,12 +12,12 @@ const { Button, ...restThemeUi } = ThemeUi;
 const { Box } = restThemeUi;
 
 export const liveEditorStyle = {
-  fontSize: '14',
-  marginBottom: '32',
-  marginTop: '32',
+  fontSize: '14px',
+  marginBottom: '32px',
+  marginTop: '32px',
   overflowX: 'auto',
-  fontFamily: 'Menlo,monospace',
-  borderRadius: '10',
+  fontFamily: 'Menlo, monospace',
+  borderRadius: '10px',
 };
 
 export const liveErrorStyle = {
@@ -27,6 +27,14 @@ export const liveErrorStyle = {
   overflowX: 'auto',
   color: 'white',
   backgroundColor: 'red',
+};
+
+const images = {
+  nyc:
+    'https://images.unsplash.com/photo-1446776899648-aa78eefe8ed0?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9',
+  flatiron:
+    'https://images.unsplash.com/photo-1520222984843-df35ebc0f24d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9',
+  logo: 'https://contrast.now.sh/fff/000?text=UI&size=96&fontSize=1.5&baseline=1',
 };
 
 const LiveCodePreview = (props) => <Box as={LivePreview} sx={{ fontFamily: 'body', mb: 3 }} {...props} />;
@@ -54,28 +62,29 @@ const StarIcon = (props) => {
   );
 };
 
-export const CodeBlock = ({ className, live = true, isManual, render, children, ...props }) => {
+export const CodeBlock = ({ className, live, isManual, render, children, ...props }) => {
   const [editorCode, setEditorCode] = useState(children.trim());
+  const [mode, _] = ThemeUi.useColorMode();
 
   const language = className && className.replace(/language-/, '');
   // const { onCopy, hasCopied } = useClipboard(editorCode);
 
-  const themes = { light: lightTheme, dark: darkTheme };
-  const theme = themes['dark'];
+  const themes = { default: lightTheme, dark: darkTheme };
+  const theme = themes[mode];
 
   const liveProviderProps = {
     theme,
     language,
     code: editorCode,
-    transformCode: (code) => '/** @jsx mdx */' + code,
-    scope: { ...restThemeUi, ...ThemeUiExpansionPack, ...ReactIcons, Lorem, mdx, StarIcon },
+    transformCode: (code) => `/** @jsx jsx */\n<>${code}</>`,
+    scope: { ...ThemeUi, ...ThemeUiExpansionPack, ...ReactIcons, Lorem, mdx, StarIcon, images },
     noInline: isManual,
     ...props,
   };
 
   const handleCodeChange = (newCode) => setEditorCode(newCode.trim());
 
-  if (language === 'jsx' && live === true) {
+  if (language.startsWith('js') && Boolean(live)) {
     return (
       <LiveProvider {...liveProviderProps}>
         <LiveCodePreview />

@@ -10,6 +10,7 @@ import Button from './button';
 import Sidebar from '../sidebar.mdx';
 import { SideNav } from './SideNav';
 import { SidebarNavHeading } from './SidebarNavHeading';
+import { Head } from './Head';
 
 const modes = ['default', 'dark'];
 
@@ -43,7 +44,6 @@ export const Layout: FC<ILayoutProps> = (props) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const nav = useRef(null);
   const [mode, setMode] = useColorMode();
-  const router = useRouter();
 
   const cycleMode = (e) => {
     const i = modes.indexOf(mode);
@@ -53,6 +53,7 @@ export const Layout: FC<ILayoutProps> = (props) => {
 
   return (
     <Styled.root>
+      <Head {...props} />
       <Flex
         sx={{
           flexDirection: 'column',
@@ -71,7 +72,7 @@ export const Layout: FC<ILayoutProps> = (props) => {
           <Flex sx={{ alignItems: 'center' }}>
             <MenuButton
               onClick={() => {
-                setMenuOpen(!menuOpen);
+                setMenuOpen((state) => !state);
                 if (!nav.current) return;
                 const navLink = nav.current.querySelector('a');
                 if (navLink) navLink.focus();
@@ -103,32 +104,19 @@ export const Layout: FC<ILayoutProps> = (props) => {
               display: ['block', 'flex'],
             }}
           >
-            <div
-              ref={nav}
-              onFocus={(e) => {
-                setMenuOpen(true);
+            <Sidebar
+              open={menuOpen}
+              components={sidebar}
+              sx={{
+                display: [null, props.fullwidth ? 'none' : 'block'],
+                width: 256,
+                flex: 'none',
+                px: 3,
+                pt: 3,
+                pb: 4,
+                mt: [64, 0],
               }}
-              onBlur={(e) => {
-                setMenuOpen(false);
-              }}
-              onClick={(e) => {
-                setMenuOpen(false);
-              }}
-            >
-              <Sidebar
-                open={menuOpen}
-                components={sidebar}
-                sx={{
-                  display: [null, props.fullwidth ? 'none' : 'block'],
-                  width: 256,
-                  flex: 'none',
-                  px: 3,
-                  pt: 3,
-                  pb: 4,
-                  mt: [64, 0],
-                }}
-              />
-            </div>
+            />
             <main
               id="content"
               sx={{
