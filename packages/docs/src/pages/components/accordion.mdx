@@ -31,7 +31,7 @@ import {
 
 By default, only one item may be expanded and it can only be collapsed again by expanding another.
 
-```jsx
+```jsx live=true
 <Accordion>
   <AccordionItem>
     <AccordionHeader>
@@ -69,7 +69,7 @@ If you set `allowMultiple` to true then the accordion will permit multiple items
 
 > If you pass this prop, ensure that the `index` or `defaultIndex` prop is an array.
 
-```jsx
+```jsx live=true
 <Accordion defaultIndex={[0]} allowMultiple>
   <AccordionItem>
     <AccordionHeader>
@@ -105,7 +105,7 @@ If you set `allowMultiple` to true then the accordion will permit multiple items
 
 If you set `allowToggle` to true, any expanded item may be collapsed again.
 
-```jsx
+```jsx live=true
 <Accordion allowToggle>
   <AccordionItem>
     <AccordionHeader>
@@ -143,7 +143,7 @@ The `AccordionHeader` component has `aria-expanded` set to `true` or `false` dep
 
 Click me to see a different style
 
-```jsx
+```jsx live=true
 <AccordionItem>
   <AccordionHeader _expanded={{ bg: 'tomato', color: 'white' }}>
     <Box flex="1" textAlign="left">
@@ -162,7 +162,7 @@ Click me to see a different style
 
 If you need access to the internal state of each accordion item, you can use a render prop. It provides 2 internal state `isExpanded`, and `isDisabled`.
 
-```jsx
+```jsx live=true
 <Accordion allowMultiple>
   <AccordionItem>
     <AccordionHeader>
