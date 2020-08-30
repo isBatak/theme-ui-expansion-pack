@@ -1,13 +1,19 @@
 import React, { forwardRef } from 'react';
 import { Box, BoxProps } from 'theme-ui';
+import { keyframes } from '@emotion/core';
+
+export const pulse = keyframes({ from: { opacity: 0.1 } });
 
 interface IDummyProps extends BoxProps {
   width?: number | string;
   height?: number | string;
+  animated?: boolean;
+  colorStart?: string;
+  colorEnd?: string;
 }
 
 export const Dummy = forwardRef<HTMLDivElement, IDummyProps>(function(
-  { sx, width = '100%', height = '1rem', ...rest },
+  { sx, width = '100%', height = '1rem', animated = true, colorStart = 'primary', colorEnd = 'neutral.20', ...rest },
   ref,
 ) {
   return (
@@ -22,6 +28,7 @@ export const Dummy = forwardRef<HTMLDivElement, IDummyProps>(function(
         display: 'inline-block',
         lineHeight: 'inherit',
         maxWidth: '100%',
+        animation: animated ? `0.8s infinite alternate ${pulse}` : undefined,
         ...sx,
       }}
       {...rest}
