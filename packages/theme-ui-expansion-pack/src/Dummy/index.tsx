@@ -8,12 +8,10 @@ interface IDummyProps extends BoxProps {
   width?: number | string;
   height?: number | string;
   animated?: boolean;
-  colorStart?: string;
-  colorEnd?: string;
 }
 
 export const Dummy = forwardRef<HTMLDivElement, IDummyProps>(function(
-  { sx, width = '100%', height = '1rem', animated = true, colorStart = 'primary', colorEnd = 'neutral.20', ...rest },
+  { sx, width = '100%', height = '1rem', animated = true, ...rest },
   ref,
 ) {
   return (
