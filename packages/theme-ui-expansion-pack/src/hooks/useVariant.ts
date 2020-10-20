@@ -4,5 +4,11 @@ import { get } from 'theme-ui';
 
 export const useVariant = (key: string, variant: string) => {
   const theme = useContext(ThemeContext);
-  return variant ? get(theme, key + '.' + variant) : {};
+  if (variant) {
+    const variation = get(theme, key + '.' + variant);
+    if (variation) {
+      return variation;
+    }
+  }
+  return {};
 };
