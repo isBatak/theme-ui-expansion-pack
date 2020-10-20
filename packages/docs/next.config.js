@@ -11,4 +11,11 @@ module.exports = withMDX({
     linkPrefix: !development ? '/theme-ui-expansion-pack' : '',
   },
   // configOrigin: !development ? 'https://isbatak.github.io/theme-ui-expansion-pack/' : 'default',
+  // typescript: {
+  //   // !! WARN !!
+  //   // Dangerously allow production builds to successfully complete even if
+  //   // your project has type errors.
+  //   // !! WARN !!
+  //   ignoreBuildErrors: true,
+  // },
 });

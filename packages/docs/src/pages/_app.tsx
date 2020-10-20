@@ -8,6 +8,7 @@ import { Meta } from '../components/Meta';
 
 function DocsApp({ Component, pageProps }: AppProps) {
   return (
+    //@ts-ignore
     <ThemeProvider theme={theme}>
       <MDXComponents>
         <Meta />
