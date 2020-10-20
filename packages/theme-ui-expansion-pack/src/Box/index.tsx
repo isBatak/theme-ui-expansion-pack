@@ -1,12 +1,15 @@
+import { ReactNode } from 'react';
 import styled from '@emotion/styled';
-import { css, get, SystemStyleObject } from '@theme-ui/css';
+import { css, get } from '@theme-ui/css';
+import { SxProps } from '@theme-ui/core';
 import { createShouldForwardProp } from '@styled-system/should-forward-prop';
+// @ts-ignore
 import space from '@styled-system/space';
+// @ts-ignore
 import color from '@styled-system/color';
 
-export interface IBoxProps {
+export interface IBoxProps extends SxProps {
   as?: ReactNode;
-  sx?: SystemStyleObject;
   variant?: string;
 }
 

@@ -1,9 +1,10 @@
 import React, { FC, forwardRef } from 'react';
 
-import { Link, ILinkProps } from '../Link';
+import { Link } from '../Link';
 import { useVariant } from '../hooks/useVariant';
+import { IBoxProps } from '../Box';
 
-interface INavLinkProps extends ILinkProps {
+interface INavLinkProps extends IBoxProps {
   isActive?: boolean;
   variant?: string;
 }
