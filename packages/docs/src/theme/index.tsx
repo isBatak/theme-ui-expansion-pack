@@ -1,15 +1,15 @@
-// import prism from '@theme-ui/prism/presets/theme-ui';
-
 export default {
   colors: {
     text: '#353535',
     textInverted: '#ffffff',
+    textMuted: '#757575',
     background: '#ffffff',
     primary: '#D8262C',
     secondary: '#BD0101',
-    muted: '#f6f6f6',
+    muted: '#f4f4f4',
     highlight: '#f6f6f6',
     gray: '#b0b0b0',
+    border: '#0000001f',
     neutral: '#b0b0b0',
     neutrals: {
       10: '#121212',
@@ -27,6 +27,7 @@ export default {
         muted: '#191919',
         highlight: '#292929',
         gray: '#b0b0b0',
+        border: '#ffffff1f',
         neutral: '#b0b0b0',
         neutrals: {
           10: '#333333',

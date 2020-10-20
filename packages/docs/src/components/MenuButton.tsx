@@ -17,11 +17,12 @@ const Burger = ({ size = '1em' }) => (
   </svg>
 );
 
-export default (props) => (
+export const MenuButton = (props) => (
   <button
     title="Toggle Menu"
     {...props}
     sx={{
+      display: [null, null, 'none'],
       fontFamily: 'inherit',
       fontSize: 24,
       color: 'inherit',
@@ -34,9 +35,6 @@ export default (props) => (
       appearance: 'none',
       ':focus': {
         outline: '2px solid',
-      },
-      '@media screen and (min-width: 40em)': {
-        display: 'none',
       },
     }}
   >
