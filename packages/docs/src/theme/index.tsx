@@ -331,5 +331,14 @@ export default {
       },
     },
   },
+  accordion: {
+    accordionHeader: {
+      p: 2,
+      cursor: 'pointer',
+      '&:hover': {
+        bg: 'muted',
+      },
+    },
+  },
   // prism,
 };
