@@ -40,9 +40,7 @@ export const SidebarNavLink: FC<{ href: string; className: string }> = ({ href, 
 
   return (
     <NextLink href={href} as={`${process.env.linkPrefix}${href}`} {...props} passHref>
-      <NavLink href={href} isActive={isActive}>
-        {children}
-      </NavLink>
+      <NavLink href={href}>{children}</NavLink>
     </NextLink>
   );
 };
